@@ -1,0 +1,647 @@
+-
+  control: AC-1
+  assignments:
+  - id: a
+    requirement: Develops, documents, and disseminates to
+    assignment: organization-defined personnel or roles
+    systemHigh: all personnel
+    source: DoD RMF TAG
+  - id: b.1
+    assignment: organization-defined frequency
+    systemModerate: at least every 3 years
+  - id: b.2
+    assignment: organization-defined frequency
+    systemLow: at least annually
+    source: FedRAMP v2
+-
+  control: AC-2
+  impact:
+  - systemHigh: ISSM or ISSO
+    source: DoD RMF TAG
+  - systemLow: at least annually
+    source: FedRAMP v2
+-
+  control: AC-2 (2)
+  assignment:
+  impact:
+  - systemHigh:
+    - For temporary user accounts 72 hours
+    - For emergency admin accounts never
+    source: DoD RMF TAG
+  - systemModerate: No more than 30 days for temporary and emergency account types
+    source: FedRAMP v2
+-
+  control: AC-2 (3)
+  assignment:
+  impact:
+  - systemHigh: 35 days
+    source: DoD RMF TAG
+  - systemModerate: 90 days for user accounts
+    source:
+      - FedRAMP v2
+      - FedRAMP Additional Requirements and Guidance
+  - systemLow: The service provider defines the time period for non-user accounts (e.g., accounts associated with devices). The time periods are approved and accepted by the Authorizing Official.
+-
+  control: AC-2 (4)
+  assignment:
+  impact:
+  systemHigh: System administrator and ISSO
+  source: DoD RMF TAG
+
+  control: AC-2 (5)
+  assignment:
+  impact:
+  - systemHigh: At the end of the users standard work period unless otherwise defined in formal organizational policy.
+    source: DoD RMF TAG
+
+  control: AC-2 (7)
+  assignment:
+  impact:
+  systemHigh: c. Disables (or revokes) privileged user account
+  source: DoD RMF TAG
+
+  control: AC-2 (9)
+  assignment:
+  impact:
+  systemLow: In support of auditing and accountability, shared/group accounts are not permitted unless the requirement to uniquely attribute user activity to the account is implemented; exceptions may be approved on a case-by-case basis. Personal accounts will not be shared.
+  source: DoD best practice, SRGs and STIGs, CNSSI 1253 Privacy Overlay.  FedRAMP Additional Requirements and Guidance: Required if shared/group accounts are deployedcontrol:
+
+  control: AC-2 (12)
+  assignment:
+  impact:
+  systemHigh: b. at a minimum, the ISSO
+  source: DoD RMF TAG
+  systemLow:  FedRAMP Additional Requirements and Guidance: AC-2 (12)(a) and AC-2 (12)(b) Additional FedRAMP Requirements and Guidance: Required for privileged accounts.control:
+
+  control: AC-6 (1)
+  systemHigh: all functions not publicly accessible and all security-relevant information not publicly available
+  source: DoD RMF TAG
+
+  control: AC-6 (2)
+  systemLow: all security functions
+  source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: AC-6 (2). Guidance: Examples of security functions include but are not limited to: establishing system accounts, configuring access authorizations (i.e., permissions, privileges), setting events to be audited, and setting intrusion detection parameters, system programming, system and security administration, other privileged functions.
+
+  control: AC-6 (7)
+  systemHigh:
+    - a. at a minimum, annually
+    - a. all users
+  source: DoD RMF TAG
+
+  control: AC-6 (8)
+  systemHigh: any software except software explicitly documented
+  source: DoD RMF TAG
+
+  control: AC-7
+  systemModerate:
+    - AC-7a [not more than three] [fifteen minutes]
+    - AC-7b [locks the account/node for thirty minutes]
+  source: FedRAMP v2
+  systemHigh:
+    - a1. Three
+    - a2. 15 minutes
+    - b1. locks the account/node
+    - b2. Until released by an administrator
+    - b3. Minimum of 5 seconds
+  source: DoD RMF TAG
+
+  control: AC-8
+  systemHigh:
+    - a. The CSO must have a capability to support the DoD banner as defined in DTM 08-060, Policy on Use of Department of Defense (DoD) Information Systems
+  source:
+    - Standard Consent Banner and User Agreement, March 2013
+    - The CSO must have a capability to support the DoD banner under conditions as defined in DTM 08-060
+    - Policy on Use of Department of Defense (DoD) Information Systems Standard Consent Banner and User Agreement, March 2013
+    - DoD RMF TAG
+  systemModerate: See Additional Requirements and Guidance.
+  source: FedRAMP v2  FedRAMP Additional Requirements and Guidance:
+  systemLow:
+    - The service provider shall determine elements of the cloud environment that require the System Use Notification control. The elements of the cloud environment that require System Use Notification are approved and accepted by the Authorizing Official (AO).
+    - The service provider shall determine how System Use Notification is going to be verified and provide appropriate periodicity of the check. The System Use Notification verification and periodicity are approved and accepted by the AO.
+    - If performed as part of a Configuration Baseline check, then the % of items requiring setting that are checked and that pass (or fail) check can be provided.
+    - If not performed as part of a Configuration Baseline check, then there must be documented agreement on how to provide results of verification and the necessary periodicity of the verification by the service provider. The documented agreement on how to provide verification of the results are approved and accepted by the AO.
+-
+  control: AC-10
+  systemHigh:all account types and/or accounts source: DoD RMF TAG
+  systemModerate: three (3) sessions for privileged access and two (2) sessions for non-privileged access source: FedRAMP v2 control:
+
+  control: AC-11
+  systemLow:a. 15 minutes source: DoD RMF TAG and FedRAMP v2 control:
+
+
+  control: AC-17 (3)
+  systemHigh:Level 4/5: Off-Premises CSP infrastructure must connect to DoD customers via one or more external DoDIN Cloud Access Points (CAPs).
+  Level 4/5: On-Premises Commercial CSP infrastructure must connect to DoD customers via one or more Internal DoDIN Cloud Access Points (CAPs).Not appropriate for DoD to define for all CSP's infrastructure or service offerings. The CSP defines the value and the DISA AO approves and/or accepts source: DoD RMF TAG
+
+  control: AC-17 (9)
+  systemHigh:immediatelysource: DoD RMF TAG
+  systemModerate:no greater than 15 minutes source: FedRAMP v2 control:
+
+
+  control: AC-22
+  systemHigh:d. Every 90 days or as new information is posted source: DoD RMF TAG
+  systemModerate:d. at least quarterly source: FedRAMP v2 control:
+
+  control: AT-1
+  systemHigh:a. all personnel source: DoD RMF TAG
+  systemLow:b.1 at least every 3 years b.2 at least annually source: FedRAMP v2 control:
+  control: AT-2
+  systemLow:c. annually source: DoD RMF TAG and FedRAMP v2 control:
+  control: AT-3
+  systemLow:c. annually source: DoD RMF TAG and FedRAMP v2 control:
+  control: AT-3 (2)
+  systemHigh:
+  all personnel with the assigned role of routine physical access to the space housing the infrastructure supporting the CSO and/or media containing customer's information
+  Annual source: DoD RMF TAG with adjustment for Commercial CSPs control:
+
+  control: AT-4
+  systemHigh:b. at least 5 years or 5 years after completion of a specific training program source: DoD RMF TAG  systemModerate: At least one year source: FedRAMP v2 control:
+  control: AU-1
+  systemHigh:a. the ISSO and ISSM and others as the local organization deems appropriate b. 1. Annually source: DoD RMF TAG
+  systemModerate: b.1 at least every 3 years
+  source: FedRAMP v2
+  systemLow:b.2 at least annually source: DoD RMF TAG and FedRAMP v2 control:
+  control: AU-2
+  systemHigh: a. Successful and unsuccessful attempts to access, modify, or delete privileges, security objects, security levels, or categories of information (e.g. classification levels). Successful and unsuccessful logon attempts, Privileged activities or other system level access, Starting and ending time for user access to the system, Concurrent logons from different workstations, Successful and unsuccessful accesses to objects, All program initiations, All direct access to the information system. All account creations, modifications, disabling, and terminations. All kernel module load, unload, and restart. d. all auditable events defined in AU-2 (a) per occurrence. source: DoD RMF TAG
+  systemModerate:a. Successful and unsuccessful account logon events, account management events, object access, policy change, privilege functions, process tracking, and system events. For Web applications: all administrator activity, authentication checks, authorization checks, data deletions, data access, data changes, and permission changes;
+  d. organization-defined subset of the auditable events defined in AU-2 a. to be audited continually for each identified event. source: FedRAMP v2 control:
+  control: AU-2 (3)
+  systemLow:Annually and based on situational awareness of threats, vulnerabilities source: DoD RMF TAG and FedRAMP v2  FedRAMP Additional Requirements and Guidance: Guidance: Annually or whenever changes in the threat environment are communicated to the service provider by the Authorizing Official.control:
+  control: AU-3 (1)
+  systemHigh:At a minimum, full-text recording of privileged commands or the individual identities of group account users. source: DoD RMF TAG  systemModerate: session, connection, transaction, or activity duration; for client-server transactions, the number of bytes received and bytes sent; additional informational messages to diagnose or identify the event; characteristics that describe or identify the object or resource being acted upon source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: AU-3 (1). systemLow: The service provider defines audit record types. The audit record types are approved and accepted by the Authorizing Official. Guidance: For client-server transactions, the number of bytes sent and received gives bidirectional transfer information that can be helpful during an investigation or inquiry.control:
+
+  control: AU-4 (1)
+  systemHigh:At a minimum, real-time for interconnected systems and weekly for stand-alone systems source: DoD RMF TAG
+  control: AU-5
+  systemHigh:a. At a minimum, the SCA and ISSO source: DoD RMF TAG  All Impact Levels : b. low-impact: overwrite oldest audit records; moderate-impact: shut down Sourc: FedRAMP v2 control:
+  control: AU-6
+  systemHigh:a. every seven days or more frequently if required by an alarm event or anomaly; b. at a minimum, the ISSO and ISSM source: DoD RMF TAG  systemModerate: a. at least weekly source: FedRAMP v2 control:
+
+  control: AU-8
+  systemHigh:b. one second source: DoD RMF TAG
+  control: AU-8 (1)
+  systemHigh:a. an authoritative time server which is synchronized with redundant United States Naval Observatory (USNO) time servers as designated for the appropriate DoD network (NIPRNet / SIPRNet) and/or the Global Positioning System (GPS); b. Greater than the organizationally defined granularity in AU-8 source: DoD RMF TAG  systemLow: a. At least hourly source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: AU-8 (1). systemLow: The service provider selects primary and secondary time servers used by the NIST Internet time service. The secondary server is selected from a different geographic region than the primary server. systemLow: The service provider synchronizes the system clocks of network computers that run operating systems other than Windows to the Windows Server Domain Controller emulator or to the same time source for that server. Guidance: Synchronization of system clocks improves the accuracy of log analysis.control:
+  control: AU-9 (2)
+  systemLow:at least weekly source: DoD RMF TAG& FedRAMP v2 control:
+
+  control: AU-11
+  systemHigh:5 years for SAMI; otherwise for at least 1 year source: DoD RMF TAG
+  systemModerate:at least ninety days source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: AU-11. systemLow: The service provider retains audit records on-line for at least ninety days and further preserves audit records off-line for a period that is in accordance with NARA requirements. NARA General Records Schedules http://www.archives.gov/records-mgmt/grs.htmlcontrol:
+  control: AU-12
+  systemHigh:a. all information system and network components b. ISSM or individuals appointed by the ISSM source: DoD RMF TAG
+  systemModerate:a. all information system and network components where audit capability is deployed/available source: FedRAMP v2 control:
+  control: AU-12 (1)
+  systemHigh:The time tracking tolerance defined in AU-8 source: DoD RMF TAG
+  control: CA-1
+  systemHigh: a. all personnel source: DoD RMF TAG
+  systemLow:b.1 at least every 3 years b.2 at least annually source: FedRAMP v2 control:
+  control: CA-2 systemLow: b. at least annually
+  source: FedRAMP v2
+  d. at a minimum, the CSP's ISSO and ISSM, FedRAMP PMO (as applicable), the DISA A&A/SCA team, and the customer's MCD source: FedRAMP v2, DoD RMF TAG with adjustment for Commercial and DoD private on-premises CSP/CSOs control:
+  control: CA-2 (1)
+  systemLow:Added to NIST Baseline for control: control: Lowcontrol: control:  FedRAMP baseline. source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: For JAB Authorization, must be an accredited 3PAOcontrol:
+  control: CA-2 (2)
+  systemLow: at least annually source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: systemLow: To include 'announced', 'vulnerability scanning'control:
+  control: CA-2 (3)
+  systemLow:CSP and CSO infrastructure
+  any FedRAMP Accredited 3PAO
+  the conditions of a PA in the FedRAMP Repository source: FedRAMP v2 control:
+  control: CA-3
+  systemLow:c. at least annually source: DoD RMF TAG
+  systemModerate:c. 3 Years / Annually and on input from FedRAMP source: FedRAMP v2 control:
+  control: CA-3 (1)
+  systemHigh:all unclassified NSS source: DoD RMF TAG
+  control: CA-3 (3)
+  systemLow:Boundary Protections which meet the Trusted Internet Connection (TIC) requirements source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: CA-3(3) Guidance: Refer to Appendix H – Cloud Considerations of the TIC 2.0 Reference Architecture document.https://www.fedramp.gov/files/2015/04/TIC_Ref_Arch_v2-0_2013.pdfcontrol:
+  control: CA-3 (5)
+  systemHigh:deny-all, permit by exception any systems requiring external connectivity source: DoD RMF TAG
+  systemLow:FedRAMP Additional Requirements and Guidance: For JAB Authorization, CSPs shall include details of this control in their Architecture Briefingcontrol:
+  control: CA-5
+  systemLow:
+  b. at least monthly source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: CA-5 Guidance: systemLow: POA&Ms must be provided at least monthly.control:
+  control: CA-6
+  systemHigh:c. at least every three years, whenever there is a significant change to the system, or if there is a change to the environment in which the system operates. source: DoD RMF TAG
+  systemModerate:c. at least every three years or when a significant change occurs source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: CA-6c. Guidance: Significant change is defined in NIST Special Publication 800-37 Revision 1, Appendix F. The service provider describes the types of changes to the information system or the environment of operations that would impact the risk posture. The types of changes are approved and accepted by the Authorizing Official.control:
+  control: CA-7 systemLow: d. To meet Federal and FedRAMP requirements source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: Operating System Scans: at least monthly Database and Web Application Scans: at least monthly All scans performed by Independent Assessor: at least annually CA-7 Guidance: CSPs must provide evidence of closure and remediation of high vulnerabilities within the timeframe for standard POA&M updates
+  NOTE: There is a discrepancy in the listing of ‘d' in the parameter value, as ‘d' does not have a parameter. This is however how the parameter is defined in FedRAMP v2.control:
+
+  control: CA-8
+  systemLow:at least annually source: FedRAMP v2 control:
+
+  control: CM-1
+  systemHigh:a. all stakeholders in the configuration management process b.1. annually source: DoD RMF TAG  systemModerate: b.1. at least every 3 years
+  systemLow:
+  b.2. at least annually source: FedRAMP v2 control:
+  control: CM-2 (1)
+  systemLow:a. at least annually
+  systemHigh:b. baseline configuration changes or as events dictate such as changes due to USCYBERCOM tactical orders/ directives or cyber-attacks. source: DoD RMF TAG  systemModerate: b. to include when directed by Authorizing Official source: FedRAMP v2 control:
+  control: CM-2 (3)
+  systemHigh:the previous approved baseline configuration of IS components for a minimum of 3 month source: DoD RMF TAG
+
+  control: CM-3
+  systemHigh:e. The time period should be defined at the organization's CCB. g. a configuration control board; g. at a frequency determined by the CCB; g. configuration change conditions determined by the CCB. source: DoD RMF TAG
+  systemLow:FedRAMP Additional Requirements and Guidance: systemLow: The service provider establishes a central means of communicating major changes to or developments in the information system or environment of operations that may affect its services to the federal government and associated service consumers (e.g., electronic bulletin board, web status page). The means of communication are approved and accepted by the Authorizing Official. CM-3e Guidance: In accordance with record retention policies and procedures.control:
+  control: CM-3 (4)
+  systemHigh:configuration control board (CCB) (as defined in CM-3, CCI 1586) source: DoD RMF TAG
+  control: CM-3 (6)
+  systemHigh:All security safeguards that rely on cryptography source: DoD RMF TAG & CNSSI 1253control:
+  control: CM-5 (3)
+  systemHigh:Any software or firmware components when the vendor provides digitally signed products source: DoD RMF TAG
+  systemLow:FedRAMP Additional Requirements and Guidance: Guidance: If digital signatures/certificates are unavailable, alternative cryptographic integrity checks (hashes, self-signed certs, etc.) can be utilized.control:
+  control: CM-5 (5)
+  systemLow:b. at least quarterly source: FedRAMP v2 control:
+  control: CM-6
+  systemHigh:a. DoD security configuration or implementation guidance (e.g. STIGs, SRGs, NSA configuration guides, CTOs, DTMs etc.).; c. All configurable information system components;source: DoD RMF TAG NOTE: DISA will evaluate Commercial CSP equivalencies on a case by case basis.
+  systemModerate:a. See CM-6(a) Additional FedRAMP Requirements and Guidance source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: CM-6a. systemLow: The service provider shall use the Center for Internet Security guidelines (Level 1) to establish configuration settings or establishes its own configuration settings if USGCB is not available. CM-6a. systemLow: The service provider shall ensure that checklists for configuration settings are Security Content Automation Protocol (SCAP) validated or SCAP compatible (if validated checklists are not available). CM-6a. Guidance: Information on the USGCB checklists can be found at: http://usgcb.nist.gov/usgcb_faq.html#usgcbfaq_usgcbfdcc .control:
+
+  control: CM-7
+  systemHigh:IAW DoDI 8551.01 source: DoD RMF TAG
+  systemModerate:United States Government Configuration Baseline (USGCB) source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: systemLow: The service provider shall use the Center for Internet Security guidelines (Level 1) to establish list of prohibited or restricted functions, ports, protocols, and/or services or establishes its own list of prohibited or restricted functions, ports, protocols, and/or services if USGCB is not available. CM-7. Guidance: Information on the USGCB checklists can be found at: http://usgcb.nist.gov/usgcb_faq.html#usgcbfaq_usgcbfdcc. (Partially derived from AC-17(8).)control:
+  control: CM-7 (1)
+  systemLow:a. at least monthly
+  source: FedRAMP v2
+  systemHigh:b. Non-secure functions, ports, protocols and services are defined in DoDI 8551.01. source: DoD RMF TAG
+  CM-7 (2) systemLow: FedRAMP Additional Requirements and Guidance: CM-7(2) Guidance: This control shall be implemented in a technical manner on the information system to only allow programs to run that adhere to the policy (i.e. white listing). This control is not to be based off of strictly written policy on what is allowed or not allowed to run.
+  control: CM-7 (5)
+  systemHigh:c. Monthly source: DoD RMF TAG  systemModerate: c. at least Annually or when there is a change. source: FedRAMP v2 control:
+  control: CM-8
+  systemHigh:a. hardware inventory specifications (manufacturer, type, model, serial number, physical location), software license information, information system/component owner, and for a networked component/device, the machine name.; source: DoD RMF TAG
+  systemLow:b. at least monthly source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: CM-8 systemLow: must be provided at least monthly or when there is a change.control:
+  control: CM-8 (3)
+  systemHigh:b. the ISSO and ISSM and others as the local organization deems appropriate source: DoD RMF TAG
+  systemLow: a. Continuously, using automated mechanisms with a maximum five-minute delay in detection. source: FedRAMP v2 control:
+  control: CM-10 (1)
+  systemHigh:IAW DoD Memorandum control: control: Clarifying Guidance Regarding Open Source Software (OSS)control: control:  16 Oct 2009 (http://dodcio.defense.gov/Portals/0/Documents/FOSS/2009OSS.pdf). source: DoD RMF TAG
+  control: CM-11
+  systemLow:c. Continuously (via CM-7 (5)) source: FedRAMP v2 control:
+  control: CP-1
+  systemHigh:a. all stakeholders identified in the contingency plan source: DoD RMF TAG
+  systemLow:b.1 at least every 3 years b.2 at least annually source: FedRAMP v2 control:
+  control: CP-2
+  systemHigh:a. at a minimum, the ISSM and ISSO b. all stakeholders identified in the contingency plan f: all stakeholders identified in the contingency plan source: DoD RMF TAG
+  systemLow:d. at least annually source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: systemLow: For JAB authorizations the contingency lists include designated FedRAMP personnel.control:
+  control: CP-2 (3)
+  systemHigh:1 hour (Availability High ) 12 hours (Availability Moderate) as defined in the contingency plan source: DoD RMF TAG
+  control: CP-3
+  systemLow: a. 10 days c. at least annually source: FedRAMP v2 control:
+  control: CP-4
+  systemHigh:a. at least annually source: DoD RMF TAG
+  systemModerate: a. at least annually for moderate impact systems; at least every three years for low impact systems] [functional exercises for moderate impact systems; classroom exercises/table top written tests for low impact systems source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: a. systemLow: The service provider develops test plans in accordance with NIST Special Publication 800-34 (as amended); plans are approved by the Authorizing Official prior to initiating testing.control:
+  control: CP-7
+  systemHigh:a. 1 hour (Availability High ) 12 hours (Availability Moderate) as defined in the contingency plan source: DoD RMF TAG
+  systemModerate:FedRAMP Additional Requirements and Guidance: CP-7a. systemLow: The service provider defines a time period consistent with the recovery time objectives and business impact analysis.control:
+  control: CP-8
+  systemHigh:1 hour (Availability High ) 12 hours (Availability Moderate) as defined in the contingency plan source: DoD RMF TAG
+  systemModerate:FedRAMP Additional Requirements and Guidance: CP-8. systemLow: The service provider defines a time period consistent with the business impact analysis.control:
+  control: CP-9 systemHigh:c. when created or received, when updated, and as required by system baseline configuration changes in accordance with the contingency plan source: DoD RMF TAG
+  systemLow: a. daily incremental; weekly full b. daily incremental; weekly full
+  systemModerate:c. daily incremental; weekly full source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: CP-9. systemLow: The service provider shall determine what elements of the cloud environment require the Information System Backup control. systemLow: The service provider shall determine how Information System Backup is going to be verified and appropriate periodicity of the check. CP-9a. systemLow: The service provider maintains at least three backup copies of user-level information (at least one of which is available online) or provides an equivalent alternative. CP-9b. systemLow: The service provider maintains at least three backup copies of system-level information (at least one of which is available online) or provides an equivalent alternative. CP-9c. systemLow: The service provider maintains at least three backup copies of information system documentation including security information (at least one of which is available online) or provides an equivalent alternative.control:
+  control: CP-9 (1)
+  systemHigh:at least monthly in accordance with contingency plan source: DoD RMF TAG
+  systemModerate:1. at least annually source: FedRAMP v2 control:
+
+  control: IA-1
+  systemHigh:the ISSO and ISSM and others as the local organization deems appropriate; b. 1. annually source: DoD RMF TAG
+  systemModerate:b.1 at least every 3 years
+  systemLow:b.2 at least annually source: FedRAMP v2 control:
+  control: IA-2 (11)
+  systemHigh:DoD PKI or a technology approved by their Authorizing Official, FIPS 140-2, NIAP Certification, or NSA approval source: DoD RMF TAG
+  control: IA-3
+  systemHigh:all mobile devices and network connected endpoint devices (including but not limited to: workstations, printers, servers (outside a datacenter), VoIP Phones, VTC CODECs). source: DoD RMF TAG
+  control: IA-4
+  systemHigh:a. ISSM or ISSO e. 35 days source: DoD RMF TAG
+  systemLow:d. at least two years
+  systemModerate:e. ninety days for user identifiers (See additional requirements and guidance.) source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: IA-4e. systemLow: The service provider defines time period of inactivity for device identifiers.control:
+  control: IA-4 (4)
+  systemHigh:contractor or government employee and by nationality. User identifiers will follow the same format as DoD user e-mail addresses (john.smith.ctr@army.mil or john.smith.uk@army.mil); - DoD user e-mail display names (e.g., John Smith, Contractor <john.smith.ctr@army.mil> or John Smith, United Kingdom <john.smith.uk@army.mil>); and - automated signature blocks (e.g., John Smith, Contractor, J-6K, Joint Staff or John Doe, Australia, LNO, Combatant Command). Contractors who are also foreign nationals are identified as both, e.g., john.smith.ctr.uk@army.mil source: DoD RMF TAG
+  systemModerate:contractors; foreign nationals
+  source: FedRAMP v2 control:
+  control: IA-5
+  systemHigh:g. CAC - every 3 years, or 1 year from term of contract Password: 60 days Biometrics: re-enroll every 3 years. source: DoD RMF TAG
+  systemModerate:g. to include sixty days for passwords source: FedRAMP v2 control:
+  control: IA-5 (1)
+  systemHigh:As supported by the device: a. minimum of 15 Characters, 1 of each of the following character sets: - Upper-case - Lower-case - Numeric - Special characters (e.g. ~ ! @ # $ % ^ & * ( ) _ + = - ‘ [ ] / ? > <)]; , source: DoD RMF TAG
+  systemModerate:Ia. case sensitive, minimum of twelve characters, and at least one each of upper-case letters, lower-case letters, numbers, and special characters
+  systemLow:
+  b. at least one d. one day minimum, sixty day maximum e. twenty four source: FedRAMP v2 control:
+  control: IA-5 (3)
+  systemHigh:The DoD PKI CP defines the role and responsibilities of a DoD PKI Registration Authority (RA). The NSS PKI CP defines the role and responsibilities of an NSS PKI RA. The DoD PKI RA–LRA CPS defines the nomination process for DoD PKI RAs. The NSS PKI DoD RPS defines the nomination process for NSS PKI RAs for DoD. The DoD PKI CP defines DoD PKI subscribers and the authentication requirements for issuance of credentials to subscribers. The NSS PKI CP defines NSS PKI subscribers and the authentication requirements for issuance of credentials to subscribers. source: DoD RMF TAG
+  systemModerate: All hardware/biometric (multifactor authenticators)in person
+  source: FedRAMP v2 control:
+  control: IA-5 (4)
+  systemHigh:complexity as identified in IA-5 (1) Part A source: DoD RMF TAG
+  systemLow:FedRAMP Additional Requirements and Guidance: IA-4e Additional FedRAMP Requirements and Guidance: Guidance: If automated mechanisms which enforce password authenticator strength at creation are not used, automated mechanisms must be used to audit strength of created password authenticatorscontrol:
+  control: IA-5 (11)
+  systemHigh:DoDI 8520.03 source: DoD RMF TAG
+
+
+  control: IR-1
+  systemHigh:a. all personnel identified as stakeholders in the incident response process, as well as the ISSM and ISSO source: DoD RMF TAG
+  systemLow:b.1 at least every 3 years
+  b.2 at least annually source: FedRAMP v2 control:
+  control: IR-2
+  systemHigh:a. 30 working days source: DoD RMF TAG
+  systemLow:c. at least annually source: FedRAMP v2 control:
+  control: IR-3
+  systemHigh:At least every six months for high availability and at least annually for low/med availability Tests as defined in the incident response plan source: DoD RMF TAG
+  systemModerate:at least annually source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: IR-3. systemLow: The service provider defines tests and/or exercises in accordance with NIST Special Publication 800-61 (as amended). systemLow: For JAB Authorization, the service provider provides test plans to the Authorizing Official (AO) annually. systemLow: Test plans are approved and accepted by the Authorizing Official prior to test commencing.control:
+  control: IR-4 (3)
+  systemHigh:Classes of incidents defined in CJCSM 6510.01B Appendix A- Enclosure B Actions defined in CJCSM 6510.01B source: DoD RMF TAG
+
+  control: IR-4 (8)
+  systemHigh:The appropriate CIRT/CERT (such as US-CERT, DoD CERT, IC CERT), the Mission Owner's MCD, and Law Enforcement Incident information as defined in section 6.4 - Cyber Incident Reporting and Responsesource: DoD RMF TAG with adjustment for Commercial CSPs control:
+  control: IR-6
+  systemHigh:a. the timeframes specified by CJCSM 6510.01B (Table C-A-1) unless the data owner provides more restrictive guidance b. The appropriate CIRT/CERT (such as US-CERT, DoD CERT, IC CERT), the Mission Owner's MCD, and Law Enforcement source: DoD RMF TAG with adjustment for Commercial CSPs
+  systemModerate:a. US-CERT incident reporting timelines as specified in NIST Special Publication 800-61 (as amended) source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: systemLow: Reports security incident information according to FedRAMP Incident Communications Procedure.control:
+  control: IR-6 (2) )
+  systemLow:the AOs who issued the PA and the customer's ATO, the customer's MCD, the CIRT/CERT (such as US-CERT, DoD CERT, IC CERT)
+  source: CC SRG best practice for community information sharing and mitigation of new vulnerabilities across the communitycontrol:
+  control: IR-8
+  systemHigh:a. at a minimum, the ISSM and ISSO b.all stakeholders identified in the incident response plan e. all stakeholders identified in the incident response plan, not later than 30 days after the change is made source: DoD RMF TAG
+  systemLow:c. at least annually source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: IR-8(b) Additional FedRAMP Requirements and Guidance: The service provider defines a list of incident response personnel (identified by name and/or by role) and organizational elements. The incident response list includes designated FedRAMP personnel. IR-8(e) Additional FedRAMP Requirements and Guidance: The service provider defines a list of incident response personnel (identified by name and/or by role) and organizational elements. The incident response list includes designated FedRAMP personnel.control:
+  control: IR-9
+  systemHigh:b. at a minimum, the OCA, the information owner/originator, the ISSM, the activity security manager, and the responsible computer incident response center source: DoD RMF TAG
+  f. time -sensitive actions that are necessary to limit the amount of damage or access. Keep a log of all actions taken regarding the CS/IA incident response, including the date/time of the action, who performed the action; create and maintain records, such as tickets, as appropriate for their role.
+  source: DoD Best Practice control:
+
+  control: IR-9 (2)
+  systemHigh:Annually source: DoD RMF TAG
+
+
+  control: MA-1
+  systemHigh:a. all stakeholders identified in the maintenance policy source: DoD RMF TAG
+  systemLow:b.1 at least every 3 years b.2 at least annually source: FedRAMP v2 control:
+
+  control: MA-3 (3)
+  systemLow:d. the information owner explicitly authorizing removal of the equipment from the facility
+  source: FedRAMP v2 control:
+  control: MA-6
+  systemHigh:
+  IAW CSO SLA or minimally as follows:Within 24 hours (Low and Moderate Availability) or immediately upon failure for (High Availability) source: DoD RMF TAG
+  control: MP-1
+  systemHigh:a. all users source: DoD RMF TAG
+  systemLow:b.1 at least every 3 years
+  b.2 at least annually source: FedRAMP v2 control:
+  control: MP-2
+  systemHigh:All types of digital and/or non-digital media containing information not cleared for public release source: DoD RMF TAG
+  control: MP-3
+  systemHigh:b. nothing unless otherwise exempted by DoDI 5200.01 and DoDM 5200.01 Vol 1-4 b. all areas unless otherwise exempted by DoDI 5200.01 and DoDM 5200.01 Vol 1-4 source: DoD RMF TAG
+  systemModerate:b. no removable media types source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: MP-3b. Guidance: Second parameter not-applicablecontrol:
+  control: MP-4
+  systemHigh:a 1. all digital and non-digital media containing sensitive, controlled, and/or classified information. a 2. areas approved for processing or storing data IAW the sensitivity and/or classification level of the information contained on/within the media.
+  source: DoD RMF TAG
+  systemModerate:a. all types of digital and non-digital media with sensitive information
+  FedRAMP Assignment: see additional FedRAMP requirements and guidance source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: MP-4a Additional FedRAMP Requirements and Guidance: systemLow: The service provider defines controlled areas within facilities where the information and information system reside.control:
+  control: MP-5
+  systemHigh:a. all digital and non-digital media containing sensitive, controlled, and/or classified information. a. DoDI 5200.1R and other organizationally defined security safeguards. source: DoD RMF TAG and FedRAMP v2
+  systemModerate: a. all media with sensitive information
+  prior to leaving secure/controlled environment: for digital media, encryption using a FIPS 140-2 validated encryption module; for non-digital media, secured in locked container source: FedRAMP v2 control:
+  control: MP-6
+  systemHigh: a. all media a. techniques and procedures IAW NIST SP 800-88 and Section 5.9: Reuse and Disposal of Storage Media and Hardware. source: DoD RMF TAG
+  control: MP-6 (2)
+  systemHigh:every 180 days. source: DoD RMF TAG
+  systemModerate:At least annually source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: Guidance: Equipment and procedures may be tested or validated for effectivenesscontrol:
+
+  control: PE-1
+  systemHigh:a. all personnel b.1 annually source: DoD RMF TAG
+  systemModerate:b.1 at least every 3 years
+  systemLow:b.2 at least annually source: FedRAMP v2 control:
+  control: PE-2
+  systemHigh:c. every 90 days source: DoD RMF TAG
+  systemModerate:c. at least annually source: FedRAMP v2 control:
+  control: PE-3
+  systemHigh:f. minimally keys or any other physical token used to gain access g. as required by security relevant events, at least annually source: DoD RMF TAG and FedRAMP v2
+  systemLow:a.2 CSP defined physical access control systems/devices AND guards d. in all circumstances within restricted access area where the information system resides f. at least annually g. at least annually source: FedRAMP v2 control:
+
+
+  control: PE-6
+  systemLow:b.at least monthly source: FedRAMP v2 control:
+  control: PE-8
+  systemLow:a for a minimum of one year b. at least monthly source: FedRAMP v2 control:
+
+
+  control: PE-14
+  DoD CSPs: NOTE: the DoD value shown for PE-14 is equivalent to the FedRAMP value and represents industry standards. It provides an evaluation benchmark. While this value is not appropriate for DoD to define for all CSP's infrastructure or service offerings, DoD CSPs must follow the DoD value while Commercial CSPs may use the FedRAMP value as follows:
+  a. For commercial grade information systems: 64.4 – 80.6 degrees F; 45% – 60% Relative Humidity; Dew Point 41.9 ° – 59°F; measured at the air intake inlet of the IT equipment casing; For other systems, levels within manufacturer specifications b. Continuously unless manufacturer specifications allow for a wide enough tolerance that control is not required source: DoD RMF TAG
+  Commercial CSPs:a. consistent with American Society of Heating, Refrigerating and Air-conditioning Engineers (ASHRAE) document entitled Thermal Guidelines for Data Processing Environments b. continuously source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: PE-14a. Requirements: The service provider measures temperature at server inlets and humidity levels by dew point.control:
+  control: PE-16
+  systemLow: all information system components source: FedRAMP v2 control:
+
+  control: PL-1
+  systemHigh:a. all personnel source: DoD RMF TAG
+  systemLow: b.1 at least every 3 years b.2 at least annually source: FedRAMP v2 control:
+  control: PL-2
+  systemHigh:b. at a minimum, the ISSO, ISSM and SCA source: DoD RMF TAG
+  systemLow:c. [t least annually source: FedRAMP v2 control:
+
+  control: PL-4
+  systemHigh:c. annually source: DoD RMF TAG
+  systemModerate:c. At least every 3 years source: FedRAMP v2 control:
+  control: PL-8
+  systemLow:b. At least annually source: FedRAMP v2 control:
+
+  control: PS-1
+  systemHigh:a. all personnel source: DoD RMF TAG
+  systemLow: b.1 at least every 3 years b.2 at least annually source: FedRAMP v2 control:
+  control: PS-2
+  systemHigh:c. Annually source: DoD RMF TAG
+  systemModerate:c. at least every three years source: FedRAMP v2 control:
+  control: PS-3
+  systemLow:b. for national security clearances; a reinvestigation is required during the 5th year for top secret security clearance, the 10th year for secret security clearance, and 15th year for confidential security clearance. For moderate risk law enforcement and high impact public trust level, a reinvestigation is required during the 5th year. There is no reinvestigation for other moderate risk positions or any low risk positions source: FedRAMP v2 control:
+  control: PS-3 (3)
+  systemLow:b. personnel screening criteria – as required by specific information source: FedRAMP v2 control:
+  control: PS-4
+  systemHigh:a.  8 hrs if unable to coordinate account deactivation with the time of termination. f. at a minimum, the ISSO and personnel responsible for revoking credentials f. immediately or within 24 hours source: DoD RMF TAG (a. FedRAMP High Baseline WG)
+  systemModerate:a. same day
+  source: FedRAMP v2 control:
+  control: PS-5
+  systemHigh:b. actions to ensure all system accesses no longer required are removed b. 24 hrs if unable to coordinate account deactivation with the time of transfer. d. at a minimum, the ISSO and personnel responsible for transferring credentials d. 24 hours source: DoD RMF TAG (b. FedRAMP High Baseline WG)  systemModerate: within 24 hours of the formal transfer action source: FedRAMP v2 control:
+  control: PS-6
+  systemHigh:c (2) when there is a change to the user's level of access, at least annually source: DoD RMF TAG and FedRAMP v2
+  systemLow:b. at least annually
+  systemModerate:c.2. [at least annually] source: FedRAMP v2 control:
+  control: PS-7
+  systemHigh:d. at a minimum, the ISSO and personnel responsible for transferring credentials d. 24 hrs if unable to coordinate account deactivation with the time of transfer or termination. source: DoD RMF TAG (d. FedRAMP High Baseline WG)
+  systemModerate:d. organization-defined time period – same day source: FedRAMP v2 control:
+  control: PS-8
+  systemHigh:b. at a minimum, the ISSO b. immediately source: DoD RMF TAG
+  control: RA-1
+  systemHigh:a. at a minimum, the ISSM and ISSO source: DoD RMF TAG
+  systemLow:b.1 at least every 3 years b.2 at least annually source: FedRAMP v2 control:
+  control: RA-3
+  systemHigh:d. ISSM, ISSO, AO, and PM source: DoD RMF TAG
+  systemLow:b. security assessment report c. at least every three years or when a significant change occurs e. at least every three years or when a significant change occurs source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: Guidance: Significant change is defined in NIST Special Publication 800-37 Revision 1, Appendix F. RA-3d. systemLow: to include the Authorizing Official; for JAB authorizations to include FedRAMPcontrol:
+  control: RA-5
+  systemHigh:a. every 30 days or as directed by an authoritative source (e.g. IAVM, CTOs, DTMs, STIGs) d. IAW an authoritative source (e.g. IAVM, CTOs, DTMs) or high-risk vulnerabilities mitigated within thirty days from date of discovery; moderate-risk vulnerabilities mitigated within ninety days from date of discovery e. at a minimum, the ISSM and ISSO source: DoD RMF TAG and FedRAMP v2
+  systemModerate:a. monthly operating system/infrastructure; monthly web applications and databases d. high-risk vulnerabilities mitigated within thirty days from date of discovery; moderate-risk vulnerabilities mitigated within ninety days from date of discovery source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: RA-5a. systemLow: an accredited independent assessor scans operating systems/infrastructure, web applications, and databases once annually. RA-5e. systemLow: to include the Risk Executive; for JAB authorizations to include FedRAMPcontrol:
+  control: RA-5 (2)
+  systemLow:prior to a new scan source: FedRAMP v2 control:
+  control: RA-5 (5)
+  systemHigh:all information systems and infrastructure components source: DoD RMF TAG
+  systemModerate:operating systems / web applications / databases
+  all scans source: FedRAMP v2 control:
+  control: SA-1
+  systemHigh:a. all personnel source: DoD RMF TAG
+  systemLow:b.1 at least every 3 years b.2 at least annually source: FedRAMP v2 control:
+
+  control: SA-4 (2)
+  systemLow:to include security-relevant external system interfaces and high-level design source: FedRAMP v2 control:
+  control: SA-4 (8)
+  systemLow:at least the minimum requirement as defined in control CA-7 source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: SA-4 (8) Guidance: CSP must use the same security standards regardless of where the system component or information system service is acquired.control:
+  control: SA-5
+  systemHigh:e. at a minimum, the ISSO, ISSM, and SCA source: DoD RMF TAG
+  control: SA-9
+  systemHigh:a. security controls defined by CNSSI 1253 and FedRAMP Security Controls Baseline(s) source: DoD RMF TAG and FedRAMP v2
+  systemModerate:a. FedRAMP Security Controls Baseline(s) if Federal information is processed or stored within the external system
+  systemLow:c. Federal/FedRAMP Continuous Monitoring requirements must be met for external systems where Federal information is processed or stored source: FedRAMP v2 control:
+  control: SA-9 (1)
+  systemHigh:b. the DoD Component CIO or their delegate(s) source: DoD RMF TAG
+  systemModerate:see Additional Requirement and Guidance source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: SA-9 (1). systemLow: The service provider documents all existing outsourced security services and conducts a risk assessment of future outsourced security services. For JAB authorizations, future planned outsourced services are approved and accepted by the JAB.control:
+  control: SA-9 (2)
+  systemLow:All external systems where Federal information is processed, transmitted or stored source: FedRAMP v2 control:
+  control: SA-9 (4)
+  systemLow:All external systems where Federal information is processed, transmitted or stored
+  source: FedRAMP v2 control:
+  control: SA-9 (5)
+  systemLow:information processing, transmission, information data, AND information services source: FedRAMP v2 control:
+  control: SA-10
+  systemHigh:e. at a minimum, the ISSO and ISSM source: DoD RMF TAG
+  systemLow:a. development, implementation, AND operation source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: SA-10e. systemLow: for JAB authorizations, track security flaws and flaw resolution within the system, component, or service and report findings to organization-defined personnel, to include FedRAMP.control:
+  control: SA-11
+  systemLow:b. Unit, integration; system; regression the infrastructure level source: DoD Best Practice control:
+  control: SA-12
+  Impact Levels 5-6:measures of protection IAW DoDI 5200.44, control: control: Protection of Mission Critical Functions to Achieve Trusted Systems and Networks (TSN)control: control:  source: DoD RMF TAG
+  control: SA-19
+  Impact Levels 5-6:b. at a minimum, USCYBERCOM b. at a minimum, the ISSO, ISSM, and PM source: DoD RMF TAG
+  control: SC-1
+  systemHigh:a. at a minimum, the ISSM/ISSO source: DoD RMF TAG
+  systemLow:b.1 at least every 3 years b.2 at least annually source: FedRAMP v2 control:
+
+
+  control: SC-7 (4)
+  systemHigh:e. every 180 days source: DoD RMF TAG
+  systemModerate:at least annually source: FedRAMP v2 control:
+  control: SC-7 (8)
+  systemHigh:protocols as designated by PPSM guidance (e.g. HTTPS, HTTP, FTP, SNMP) any network external to the authorization boundary source: DoD RMF TAG
+
+  control: SC-7 (12)
+  systemHigh:Host Intrusion Prevention System (HIPS) All information system components. source: DoD RMF TAG
+  NOTE: DISA will evaluate Commercial CSP equivalencies on a case by case basis. control:
+  control: SC-7 (13)
+  systemHigh:key information security tools, mechanisms, and support components such as, but not limited to PKI, Patching infrastructure, HBSS, Cyber Defense Tools, Special Purpose Gateway, vulnerability tracking systems, honeypots, internet access points (IAPs); network element and data center administrative/management traffic; Demilitarized Zones (DMZs), Server farms/computing centers, centralized audit log servers etc. source: DoD RMF TAG  systemModerate: FedRAMP Additional Requirements and Guidance: SC-7 (13). systemLow: The service provider defines key information security tools, mechanisms, and support components associated with system and security administration and isolates those tools, mechanisms, and support components from other internal information system components via physically or logically separate subnets.control:
+  control: SC-7 (14)
+  systemHigh:internet access points, enclave LAN to WAN, cross domain solutions, and any DoD Approved Alternate Gateways. source: DoD RMF TAG
+  control: SC-8 (1)
+  systemLow:prevent unauthorized disclosure of information AND detect changes to information
+  a hardened or alarmed carrier Protective Distribution System (PDS)
+  source: FedRAMP v2 control:
+  control: SC-8 (2);
+  systemHigh:Confidentiality and integrity source: CNSSI 1253 control:
+  control: SC-10
+  systemHigh:10 minutes privileged sessions and 15 minutes for user sessions source: (FedRAMP High Baseline WG)
+  systemModerate:no longer than 30 minutes for RAS-based sessions or no longer than 60 minutes for non-interactive user sessions source: FedRAMP v2 control:
+  control: SC-12
+  systemHigh:DoDI 8520.02 control: control: Public Key Infrastructure and Public Key Enablingcontrol: control:  and DoDI 8520.03 control: control: Identity Authentication for Information Systemscontrol: control:  source: DoD RMF TAG
+  systemModerate:FedRAMP Additional Requirements and Guidance: SC-12 Guidance: Federally approved cryptographycontrol:
+  control: SC-12 (2)
+  systemHigh:NIST Approved for Unclassified systems NSA Approved for Classified systems source: DoD RMF TAG
+  Impact Levels 2:NIST FIPS-compliant source: FedRAMP v2 control:
+  control: SC-13
+  systemHigh:Protection of classified information: NSA-approved cryptography; provision of digital signatures and hashing: FIPS-validated cryptography source: DoD RMF TAG
+  systemModerate: FIPS-validated or NSA-approved cryptography source: FedRAMP v2 control:
+  control: SC-15
+  systemHigh:Dedicated VTC suites located in approved VTC locations that are centrally managed source: DoD RMF TAG
+  systemModerate:a. no exceptions source: FedRAMP v2 control:
+  control: SC-17
+  systemHigh:DoDI 8520.02, control: control: Public Key Infrastructure (PKI) and Public Key (PK) Enabling.control: control:  source: DoD RMF TAG
+
+  control: SC-23 (5)
+  systemHigh:DoD PKI established certificate authorities. source: DoD RMF TAG
+  SC-28 systemLow: confidentiality AND integrity source: FedRAMP v2  FedRAMP Additional Requirements and Guidance: SC-28. Guidance: The organization supports the capability to use cryptographic mechanisms to protect information at rest.
+  SC-28 (1) systemHigh: any information system components storing data defined in SC-28 (1), 2473 source: DoD RMF TAG
+  control: SI-1
+  systemHigh:a. all appointed information assurance personnel source: DoD RMF TAG
+  systemLow:b.1 at least every 3 years b.2 at least annually source: FedRAMP v2 control:
+  control: SI-2
+  systemHigh:c. within the time period directed by an authoritative source (e.g. IAVM, CTOs, DTMs, STIGs) or within 30 days of release of updates source: DoD RMF TAG and FedRAMP v2
+  systemModerate:c. Within 30 days of release of updates source: FedRAMP v2 control:
+  control: SI-2 (2)
+  systemHigh:Continuously with host-based monitoring software. Annually for external scans by (Computer Network Defense Service Provider) CDSP source: DoD RMF TAG
+  systemModerate: at least monthly source: FedRAMP v2 control:
+  control: SI-2 (3)
+  systemHigh:b. within the period directed by an authoritative source (e.g. IAVM, CTOs, DTMs, STIGs) source: DoD RMF TAG
+  control: SI-2 (6)
+  systemHigh:All upgraded/replaced software and firmware components that are no longer required for operation source: DoD RMF TAG
+  control: SI-3
+  systemHigh:c (2). Block and quarantine malicious code and then send an alert to the administrator immediately (in real time) or in near real-time source: DoD RMF TAG
+  systemLow:c.1 at least weekly
+  to include endpoints
+  systemModerate:c.2 to include alerting administrator or defined security personnel source: FedRAMP v2 control:
+
+  control: SI-4
+  systemHigh:a. (1) sensor placement and monitoring requirements within CJCSI 6510.01F source: DoD RMF TAG
+  g. monitoring information related to a change in security posture and vulnerabilities that affects the DoD Mission Owner's system/application/information
+  the AOs who issued the PA and the customer's ATO, and the DoD Mission Owner's MCD
+  as needed.
+  source: CC SRG best practice for CSP integration with DoD processes control:
+  control: SI-4 (4)
+  systemLow:continually source: FedRAMP v2 control:
+  control: SI-4 (5)
+  systemHigh:at a minimum, the ISSM and ISSO Real time intrusion detection and when there are threats identified by authoritative sources (e.g. CTOs) and IAW incident categories I, II, IV, & VII within CJCSM 6510.01B source: DoD RMF TAG
+  systemLow:FedRAMP Additional Requirements and Guidance: In accordance with the incident response plan.control:
+  control: SI-4 (12)
+  systemHigh:When there are threats identified by authoritative sources (e.g. CTOs) and IAW with CJCSM 6510.01B source: DoD RMF TAG
+
+
+  control: SI-4 (22)
+  systemHigh: Alerts at a minimum, the ISSM or ISSO, and the Mission Owner's MCD source: DoD RMF TAG with adjustment for Commercial CSPs control:
+  control: SI-4 (23)
+  systemHigh:Host-based monitoring software all components source: DoD RMF TAG
+  control: SI-5
+  systemHigh:a. At a minimum, USCYBERCOM. c. the ISSO and ISSM c. not applicable as elements are not selected as recipients of security alerts, advisories and directives c. CDSP Tier 1 for vetting. The CDSP Tier 1 will pass the information to the accredited Tier 2 CDSPs. Tier 2 CDSPs are responsible for ensuring all Tier 3 entities receive the information. Tier 3 organizations will ensure all local Op Centers/LAN shops receive information (i.e. Component IT System and Security Personnel) (e.g. ISSM, ISSOs, and system administrators) source: DoD RMF TAG
+  systemModerate:a. to include US-CERT c. to include system security personnel and administrators with configuration/patch-management responsibilities source: FedRAMP v2 control:
+  control: SI-6
+  systemLow:b to include upon system startup and/or restart at least monthly c to include system administrators and security personnel d to include notification of system administrators and security personnel source: DoD RMF TAG and FedRAMP v2 control:
+
+  control: SI-7 (1)
+  systemLow:Selection to include security relevant events and at least monthly source: FedRAMP v2 control:
+
+  control: SI-10
+  systemHigh:All inputs except those identified specifically by the organization source: DoD RMF TAG
+  control: SI-11
+  systemHigh:b. the ISSO, ISSM, and SCA source: DoD RMF TAG
+
+
+
+
+  control: AC-2 (13)
+  systemHigh:30 minutes unless otherwise defined in formal organizational policy source: DoD RMF TAG
+
+  control: AC-12 (1)
+  Impact Levels 5-6:a. all source: DoD RMF TAG
+  AC-16 systemHigh: c. security attributes defined in AC-16, CCIs 2256-2258 c. all information systems d. the values defined in AC-16, CCIs 2259-2261 source: DoD RMF TAG
+
+  control: AU-10
+  Impact Levels 5-6:actions defined by DoDI 8520.02 and DoDI 8520.03 source: DoD RMF TAG
+  control: IA-3 (1)
+  systemHigh:
+  Selection: Minimally remote and network
+  DoD Supplemental guidance: Once a device is authentication it must be authorized using the principle of least privilege.control:
+  control: SC-7 (11)
+  Impact Level 4control:
+  control: SC-7 (14)
+  Impact Levels 4-5:internet access points, enclave LAN to WAN, cross domain solutions, and any DoD Approved Alternate Gateways. source: DoD RMF TAG
+  control: SC-18 (3)
+  Impact Levels 5-6:
+  control: control: All unacceptable mobile code such as:
+  (a) Emerging mobile code technologies that have not undergone a risk assessment and been assigned to a Risk Category by the DoD CIO.
+  (b) Unsigned Category 1 mobile code and Category 1 mobile code technologies that cannot block or disable unsigned mobile code (e.g., Windows Scripting Host).
+  (d) Category 2 mobile code not obtained from a trusted source over an assured channel (e.g., SIPRNet, SSL connection, S/MIME, code is signed with an approved code signing certificate).control: control:
+  source: CNSS 1253
+  Supplemental guidance:
+  For the protection of the infrastructure supporting a CSO, CSPs should apply this control to their organizational IT systems and the infrastructure supporting their CSO(s)
+  For the protection of Mission Owners', their end users, and networks; CSP CSOs must not support the downloading of mobile code which is deemed unacceptable to DoD.
+  See Section 5.16: Mobile Code for more information.control:
+  control: SC-18 (4)
+  Impact Levels 5-6:Software applications and such as but not limited to email, scriptable document/file editing applications that support documents with embedded code (e.g., MS Office applications/documents), etc.
+  Prompting the user for permission.
+  source: CNSS 1253, DoD RMF TAG with adjustment for Commercial CSPscontrol:

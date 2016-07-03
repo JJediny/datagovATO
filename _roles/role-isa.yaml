@@ -1,0 +1,28 @@
+id: role-isa
+type: role
+title: Information Security Architect
+source: RMF
+responsibilities:
+  primary:
+    - 2.1
+    - 2.2
+  secondary:
+description: |
+  The information security architect is an individual, group, or organization
+  responsible for ensuring that the information security requirements necessary
+  to protect the organization's core missions and business processes are
+  adequately addressed in all aspects of enterprise architecture including
+  reference models, segment and solution architectures, and the resulting
+  information systems supporting those missions and business processes.
+terms:
+- text: Information Security Architect
+  same-as:
+    term: ISA
+  same-as:
+    term: Director of Security
+- text: ISA
+  same-as:
+    term: Information Security Architect
+  same-as:
+    term: Director of Security
+- text: Director of Security

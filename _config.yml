@@ -1,6 +1,7 @@
 ###########
 # site.url, site.title
-title: 'Data.gov ATO'
+title: Data.gov System Security Plan (SSP)
+system: Data.gov
 branch: gh-pages
 
 ## note:

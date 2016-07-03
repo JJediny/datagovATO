@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created by yFiles for HTML 1.3.0.4-->
+<graphml xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml.html/1.0/ygraphml.xsd " xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:y="http://www.yworks.com/xml/yfiles-common/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:yjs="http://www.yworks.com/xml/yfiles-for-html/1.0/xaml" xmlns:bpmn="http://www.yworks.com/xml/yfiles-bpmn/1.0" xmlns:wpfbridge="http://www.yworks.com/xml/yfiles-for-html/1.0/wpfbridge">
+	<key id="d0" for="all" attr.name="UserTags" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/UserTags"/>
+	<key id="d1" for="node" attr.name="NodeLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeLabels"/>
+	<key id="d2" for="node" attr.name="NodeGeometry" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeGeometry"/>
+	<key id="d3" for="node" attr.name="NodeStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/NodeStyle"/>
+	<key id="d4" for="node" attr.type="boolean" attr.name="Expanded" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/Expanded">
+		<default>true</default>
+	</key>
+	<key id="d5" for="node" attr.name="NodeViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/NodeViewState"/>
+	<key id="d6" for="edge" attr.name="EdgeLabels" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeLabels"/>
+	<key id="d7" for="edge" attr.name="EdgeGeometry" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeGeometry"/>
+	<key id="d8" for="edge" attr.name="EdgeStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/EdgeStyle"/>
+	<key id="d9" for="edge" attr.name="EdgeViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/EdgeViewState"/>
+	<key id="d10" for="port" attr.name="PortLocationParameter" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortLocationParameter">
+		<default>
+			<x:Static member="yjs:NodeScaledPortLocationModel.NODE_CENTER_ANCHORED"/>
+		</default>
+	</key>
+	<key id="d11" for="port" attr.name="PortStyle" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/PortStyle">
+		<default>
+			<x:Static member="y:VoidPortStyle.INSTANCE"/>
+		</default>
+	</key>
+	<key id="d12" for="port" attr.name="PortViewState" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/1.1/PortViewState"/>
+	<key id="d13" attr.name="SharedData" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/SharedData"/>
+	<data key="d13">
+		<y:SharedData>
+			<yjs:SimpleLabelStyle x:Key="1" verticalTextAlignment="CENTER" textAlignment="CENTER" textBrush="Black">
+				<yjs:SimpleLabelStyle.typeface>
+					<wpfbridge:Typeface fontSize="8"/>
+				</yjs:SimpleLabelStyle.typeface>
+			</yjs:SimpleLabelStyle>
+			<bpmn:AlternatingLeafStripeStyle x:Key="2">
+				<bpmn:AlternatingLeafStripeStyle.evenLeafDescriptor>
+					<bpmn:StripeDescriptor backgroundBrush="#FFC4D7ED" insetBrush="#FFE0E0E0" borderBrush="Black"/>
+				</bpmn:AlternatingLeafStripeStyle.evenLeafDescriptor>
+				<bpmn:AlternatingLeafStripeStyle.parentDescriptor>
+					<bpmn:StripeDescriptor backgroundBrush="#FF7192B2" insetBrush="#FFE0E0E0" borderBrush="Black"/>
+				</bpmn:AlternatingLeafStripeStyle.parentDescriptor>
+				<bpmn:AlternatingLeafStripeStyle.oddLeafDescriptor>
+					<bpmn:StripeDescriptor backgroundBrush="#FFABC8E2" insetBrush="#FFE0E0E0" borderBrush="Black"/>
+				</bpmn:AlternatingLeafStripeStyle.oddLeafDescriptor>
+			</bpmn:AlternatingLeafStripeStyle>
+			<yjs:ShapeNodeStyle x:Key="3" brush="#00FFFFFF"/>
+			<yjs:InteriorLabelModel x:Key="4"/>
+			<yjs:SimpleLabelStyle x:Key="5" verticalTextAlignment="CENTER" textAlignment="CENTER" textBrush="Black">
+				<yjs:SimpleLabelStyle.typeface>
+					<wpfbridge:Typeface fontSize="8"/>
+				</yjs:SimpleLabelStyle.typeface>
+			</yjs:SimpleLabelStyle>
+			<bpmn:BpmnEdgeStyle x:Key="6"/>
+			<bpmn:BpmnEdgeStyle x:Key="7"/>
+			<bpmn:BpmnEdgeStyle x:Key="8" type="DEFAULT_FLOW"/>
+			<yjs:RotatedSliderEdgeLabelModel x:Key="9" distance="-5e-324"/>
+			<yjs:RotatedSliderEdgeLabelModel x:Key="10" distance="5e-324"/>
+			<y:StripeDefaults x:Key="11" insets="20,0,0,0" style="{y:GraphMLReference 2}">
+				<y:StripeDefaults.labels>
+					<y:LabelDefaults autoAdjustPreferredSize="true" shareLabelModelParameterInstance="true" labelModelParameter="{x:Static yjs:StretchStripeLabelModel.WEST}" style="{y:GraphMLReference 1}" shareStyleInstance="true"/>
+				</y:StripeDefaults.labels>
+			</y:StripeDefaults>
+			<y:StripeDefaults x:Key="12" insets="0,30,0,0" style="{y:GraphMLReference 3}">
+				<y:StripeDefaults.labels>
+					<y:LabelDefaults autoAdjustPreferredSize="true" shareLabelModelParameterInstance="true" labelModelParameter="{x:Static yjs:StretchStripeLabelModel.NORTH}" shareStyleInstance="true">
+						<y:LabelDefaults.style>
+							<yjs:SimpleLabelStyle verticalTextAlignment="CENTER" textAlignment="CENTER" textBrush="Black">
+								<yjs:SimpleLabelStyle.typeface>
+									<wpfbridge:Typeface fontSize="8"/>
+								</yjs:SimpleLabelStyle.typeface>
+							</yjs:SimpleLabelStyle>
+						</y:LabelDefaults.style>
+					</y:LabelDefaults>
+				</y:StripeDefaults.labels>
+			</y:StripeDefaults>
+			<yjs:ShapeNodeStyle x:Key="13" brush="#FFE0E0E0"/>
+			<bpmn:BpmnEdgeStyle x:Key="14" type="MESSAGE_FLOW"/>
+		</y:SharedData>
+	</data>
+	<graph id="G" edgedefault="directed">
+		<node id="n0">
+			<data key="d1">
+				<x:List>
+					<y:Label labelModelParameter="{x:Static bpmn:PoolHeaderLabelModel.WEST}" preferredSize="205.42578125,9">
+						<y:Label.text><![CDATA[Lower-level Business Process for the High-Level Example]]></y:Label.text>
+						<y:Label.style>
+							<yjs:SimpleLabelStyle verticalTextAlignment="CENTER" textAlignment="CENTER" autoFlip="false" textBrush="Black">
+								<yjs:SimpleLabelStyle.typeface>
+									<wpfbridge:Typeface fontSize="8"/>
+								</yjs:SimpleLabelStyle.typeface>
+							</yjs:SimpleLabelStyle>
+						</y:Label.style>
+					</y:Label>
+				</x:List>
+			</data>
+			<data key="d2">
+				<y:RectD x="-80" y="-730" width="1738.013179516672" height="836.3408361350869"/>
+			</data>
+			<data key="d3">
+				<bpmn:PoolNodeStyle>
+					<yjs:TableNodeStyle tableRenderingOrder="ROWS_FIRST" backgroundStyle="{y:GraphMLReference 13}">
+						<yjs:TableNodeStyle.table>
+							<y:Table insets="20,0,0,0" rowDefaults="{y:GraphMLReference 11}" columnDefaults="{y:GraphMLReference 12}">
+								<y:Table.rows>
+									<y:Row minimumSize="50" size="189" insets="40,0,0,0" style="{y:GraphMLReference 2}">
+										<y:Row.labels>
+											<y:Label labelModelParameter="{x:Static yjs:StretchStripeLabelModel.WEST}" style="{y:GraphMLReference 1}" preferredSize="92.0390625,21">
+												<y:Label.text><![CDATA[Tap Systems Coordinator 
+(Project Manager)]]></y:Label.text>
+											</y:Label>
+										</y:Row.labels>
+									</y:Row>
+									<y:Row minimumSize="50" size="90" insets="40,0,0,0" style="{y:GraphMLReference 2}">
+										<y:Row.labels>
+											<y:Label labelModelParameter="{x:Static yjs:StretchStripeLabelModel.WEST}" style="{y:GraphMLReference 1}" preferredSize="47.13671875,21">
+												<y:Label.text><![CDATA[Business
+Development]]></y:Label.text>
+											</y:Label>
+										</y:Row.labels>
+									</y:Row>
+									<y:Row minimumSize="50" size="90" insets="20,0,0,0" style="{y:GraphMLReference 2}">
+										<y:Row.labels>
+											<y:Label labelModelParameter="{x:Static yjs:StretchStripeLabelModel.WEST}" style="{y:GraphMLReference 1}" preferredSize="19.57421875,9">
+												<y:Label.text>Legal</y:Label.text>
+											</y:Label>
+										</y:Row.labels>
+									</y:Row>
+									<y:Row minimumSize="50" size="191" insets="40,0,0,0" style="{y:GraphMLReference 2}">
+										<y:Row.labels>
+											<y:Label labelModelParameter="{x:Static yjs:StretchStripeLabelModel.WEST}" style="{y:GraphMLReference 1}" preferredSize="46.37890625,21">
+												<y:Label.text><![CDATA[Land or
+Right-of-Way]]></y:Label.text>
+											</y:Label>
+										</y:Row.labels>
+									</y:Row>
+									<y:Row minimumSize="50" size="96.34083613508687" insets="40,0,0,0" style="{y:GraphMLReference 2}">
+										<y:Row.labels>
+											<y:Label labelModelParameter="{x:Static yjs:StretchStripeLabelModel.WEST}" style="{y:GraphMLReference 1}" preferredSize="41.78125,21">
+												<y:Label.text><![CDATA[LDC
+(Distributor)]]></y:Label.text>
+											</y:Label>
+										</y:Row.labels>
+									</y:Row>
+									<y:Row minimumSize="50" size="90" insets="20,0,0,0" style="{y:GraphMLReference 2}">
+										<y:Row.labels>
+											<y:Label labelModelParameter="{x:Static yjs:StretchStripeLabelModel.WEST}" style="{y:GraphMLReference 1}" preferredSize="20.453125,9">
+												<y:Label.text>Retail</y:Label.text>
+											</y:Label>
+										</y:Row.labels>
+									</y:Row>
+									<y:Row minimumSize="50" size="90" insets="40,0,0,0" style="{y:GraphMLReference 2}">
+										<y:Row.labels>
+											<y:Label labelModelParameter="{x:Static yjs:StretchStripeLabelModel.WEST}" style="{y:GraphMLReference 1}" preferredSize="35.57421875,21">
+												<y:Label.text><![CDATA[Employee
+At-Large]]></y:Label.text>
+											</y:Label>
+										</y:Row.labels>
+									</y:Row>
+								</y:Table.rows>
+								<y:Table.columns>
+									<y:Column style="{y:GraphMLReference 3}" minimumSize="10" size="1678.013179516672"/>
+								</y:Table.columns>
+							</y:Table>
+						</yjs:TableNodeStyle.table>
+					</yjs:TableNodeStyle>
+				</bpmn:PoolNodeStyle>
+			</data>
+			<graph id="n0:" edgedefault="directed">
+				<node id="n0::n0">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="45.35546875,33">
+								<y:Label.text><![CDATA[Request 1st-
+Gate
+Information]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="280" y="-686" width="76.3392919180178" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0,-0.5"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n1">
+					<data key="d2">
+						<y:RectD x="0" y="46.340836135086874" width="30" height="30"/>
+					</data>
+					<data key="d3">
+						<bpmn:EventNodeStyle minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n2">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="29.796875,21">
+								<y:Label.text><![CDATA[Receive
+Request]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="70" y="41.340836135086874" width="60" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.23757604772101,0.0444249623738131"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0,-0.5"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p3">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n3">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="43.578125,33">
+								<y:Label.text><![CDATA[Refer to Tap
+Systems
+Coordinator]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="170" y="41.340836135086874" width="60" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n4">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="44.4609375,33">
+								<y:Label.text><![CDATA[Receive 1st-
+Gate 
+Information]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="406.3392919180178" y="-686" width="76.3392919180178" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0,-0.5"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n5">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="35.57421875,21">
+								<y:Label.text><![CDATA[Interstate 
+Pipeline?]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:ExteriorLabelModelParameter position="NORTH">
+										<yjs:ExteriorLabelModelParameter.model>
+											<yjs:ExteriorLabelModel/>
+										</yjs:ExteriorLabelModelParameter.model>
+									</yjs:ExteriorLabelModelParameter>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="523.6785838360356" y="-686" width="40" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:GatewayNodeStyle minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0,0.5"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n6">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="45.34765625,21">
+								<y:Label.text><![CDATA[Contact and
+Inform Retail]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="620.8275180666872" y="-606" width="71.6964595900887" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.499999999999999,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.499999999999999,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n7">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="42.24609375,9">
+								<y:Label.text><![CDATA[Notify Legal]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="878.3722074518204" y="-606" width="60" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.3,0.5"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n8">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="47.5859375,21">
+								<y:Label.text><![CDATA[Receive And
+Acknowledge]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="755.8133381951669" y="-48.659163864913126" width="69.26950871826239" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n9">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="55.1328125,21">
+								<y:Label.text><![CDATA[Notify Business
+Development]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="1127.8365138452127" y="-606" width="75.83404992352405" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.500000000000001,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.500000000000001,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n10">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="47.5859375,21">
+								<y:Label.text><![CDATA[Receive and
+Acknowledge]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="998.3722074518204" y="-426" width="69.46430639339246" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.499999999999998,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n11">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="56.4609375,21">
+								<y:Label.text><![CDATA[Refer Customer
+to Retail]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="1372.9400724869993" y="-686" width="78.73381511165485" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.223345241870559,-0.5"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.223345241870559,-0.5"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.499999999999999,0"/>
+						</data>
+					</port>
+					<port name="p3">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.499999999999999,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n12">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="47.5859375,21">
+								<y:Label.text><![CDATA[Receive and
+Acknowledge]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="1253.6705637687369" y="-516" width="69.26950871826239" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n13">
+					<data key="d2">
+						<y:RectD x="1514.843533557663" y="-681" width="30" height="30"/>
+					</data>
+					<data key="d3">
+						<bpmn:EventNodeStyle characteristic="END" minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n14">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="56.0234375,21">
+								<y:Label.text><![CDATA[Request
+Contact Review]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="613.6785838360356" y="-686" width="85.9943280513919" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n15">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="34.67578125,21">
+								<y:Label.text><![CDATA[Advise
+Customer]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="1003.1043606485166" y="-606" width="60" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n16">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="56.0234375,21">
+								<y:Label.text><![CDATA[Request
+Contact Review]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="752.5239776567759" y="-317" width="75.84822979504452" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.0668842126161939,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n17">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="44.91015625,21">
+								<y:Label.text><![CDATA[Contact
+Constraints?]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:ExteriorLabelModelParameter position="SOUTH">
+										<yjs:ExteriorLabelModelParameter.model>
+											<yjs:ExteriorLabelModel/>
+										</yjs:ExteriorLabelModelParameter.model>
+									</yjs:ExteriorLabelModelParameter>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="888.3722074518204" y="-317" width="40" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:GatewayNodeStyle minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0,-0.5"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n18">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="39.578125,21">
+								<y:Label.text><![CDATA[Tap for gas
+delivery?]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:ExteriorLabelModelParameter position="NORTH_EAST">
+										<yjs:ExteriorLabelModelParameter.model>
+											<yjs:ExteriorLabelModel/>
+										</yjs:ExteriorLabelModelParameter.model>
+									</yjs:ExteriorLabelModelParameter>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="1145.753538806975" y="-317" width="40" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:GatewayNodeStyle minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0,-0.5"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0,0.5"/>
+						</data>
+					</port>
+					<port name="p3">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n19">
+					<data key="d2">
+						<y:RectD x="1268.305318127868" y="-235" width="40" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:GatewayNodeStyle minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0,-0.5"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n20">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="5.3359375,9">
+								<y:Label.text>B</y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:ExteriorLabelModelParameter position="NORTH">
+										<yjs:ExteriorLabelModelParameter.model>
+											<yjs:ExteriorLabelModel/>
+										</yjs:ExteriorLabelModelParameter.model>
+									</yjs:ExteriorLabelModelParameter>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="1397.3069800428266" y="-230" width="30" height="30"/>
+					</data>
+					<data key="d3">
+						<bpmn:EventNodeStyle characteristic="CATCHING" minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n0::n21">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="5.77734375,9">
+								<y:Label.text>C</y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:ExteriorLabelModelParameter position="NORTH">
+										<yjs:ExteriorLabelModelParameter.model>
+											<yjs:ExteriorLabelModel/>
+										</yjs:ExteriorLabelModelParameter.model>
+									</yjs:ExteriorLabelModelParameter>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="1397.3069800428266" y="-312" width="30" height="30"/>
+					</data>
+					<data key="d3">
+						<bpmn:EventNodeStyle characteristic="CATCHING" minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0,0.5"/>
+						</data>
+					</port>
+				</node>
+				<edge id="n0::e0" source="n0::n1" target="n0::n2" sourceport="p0" targetport="p2">
+					<data key="d8">
+						<y:GraphMLReference resourceKey="6"/>
+					</data>
+				</edge>
+				<edge id="n0::e1" source="n0::n2" target="n0::n3" sourceport="p3" targetport="p0">
+					<data key="d8">
+						<y:GraphMLReference resourceKey="6"/>
+					</data>
+				</edge>
+				<edge id="n0::e2" source="n0::n3" target="n0::n0" sourceport="p1" targetport="p1">
+					<data key="d7">
+						<x:List>
+							<y:Bend location="255,61.3408361350869"/>
+							<y:Bend location="255,-666"/>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e3" source="n0::n0" target="n0::n4" sourceport="p2" targetport="p1">
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e4" source="n0::n4" target="n0::n5" sourceport="p2" targetport="p0">
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e5" source="n0::n5" target="n0::n6" sourceport="p1" targetport="p0">
+					<data key="d6">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="10.2265625,9">
+								<y:Label.text>No</y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:SideSliderLabelModelParameter location="FROM_SOURCE, RIGHT" segmentRatio="0">
+										<yjs:SideSliderLabelModelParameter.model>
+											<yjs:SideSliderEdgeLabelModel distance="0.99"/>
+										</yjs:SideSliderLabelModelParameter.model>
+									</yjs:SideSliderLabelModelParameter>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d7">
+						<x:List>
+							<y:Bend location="543.678583836036,-586"/>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e6" source="n0::n6" target="n0::n8" sourceport="p1" targetport="p0">
+					<data key="d7">
+						<x:List>
+							<y:Bend location="717.885678329765,-586"/>
+							<y:Bend location="717.885678329765,-28.6591638649131"/>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e7" source="n0::n8" target="n0::n7" sourceport="p1" targetport="p0">
+					<data key="d7">
+						<x:List>
+							<y:Bend location="853.37220745182,-28.6591638649131"/>
+							<y:Bend location="853.37220745182,-586"/>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e8" source="n0::n7" target="n0::n10" sourceport="p1" targetport="p0">
+					<data key="d7">
+						<x:List>
+							<y:Bend location="926.37220745182,-406"/>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e9" source="n0::n10" target="n0::n9" sourceport="p1" targetport="p0">
+					<data key="d7">
+						<x:List>
+							<y:Bend location="1107.83651384521,-406"/>
+							<y:Bend location="1107.83651384521,-586"/>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e10" source="n0::n9" target="n0::n12" sourceport="p1" targetport="p0">
+					<data key="d7">
+						<x:List>
+							<y:Bend location="1228.67056376874,-586"/>
+							<y:Bend location="1228.67056376874,-496"/>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e11" source="n0::n12" target="n0::n11" sourceport="p1" targetport="p2">
+					<data key="d7">
+						<x:List>
+							<y:Bend location="1347.940072487,-496"/>
+							<y:Bend location="1347.940072487,-666"/>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e12" source="n0::n11" target="n0::n13" sourceport="p3" targetport="p0">
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e13" source="n0::n5" target="n0::n14" sourceport="p2" targetport="p0">
+					<data key="d6">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="13.05078125,9">
+								<y:Label.text>Yes</y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:RotatedSliderLabelModelParameter model="{y:GraphMLReference 9}" segmentRatio="0"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="8"/>
+					</data>
+				</edge>
+				<edge id="n0::e14" source="n0::n14" target="n0::n16" sourceport="p1" targetport="p1">
+					<data key="d7">
+						<x:List>
+							<y:Bend location="734.311211214439,-666"/>
+							<y:Bend location="734.311211214439,-297"/>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e15" source="n0::n16" target="n0::n17" sourceport="p2" targetport="p1">
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e16" source="n0::n17" target="n0::n18" sourceport="p2" targetport="p1">
+					<data key="d6">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="10.2265625,9">
+								<y:Label.text>No</y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:RotatedSliderLabelModelParameter model="{y:GraphMLReference 10}" segmentRatio="0"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e17" source="n0::n15" target="n0::n18" sourceport="p0" targetport="p0">
+					<data key="d7">
+						<x:List>
+							<y:Bend location="1087.83651384521,-586"/>
+							<y:Bend location="1087.83651384521,-376"/>
+							<y:Bend location="1165.75353880698,-376"/>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e18" source="n0::n17" target="n0::n15" sourceport="p0" targetport="p1">
+					<data key="d6">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="13.05078125,9">
+								<y:Label.text>Yes</y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:SideSliderLabelModelParameter location="FROM_SOURCE, RIGHT" segmentRatio="0">
+										<yjs:SideSliderLabelModelParameter.model>
+											<yjs:SideSliderEdgeLabelModel distance="0.99"/>
+										</yjs:SideSliderLabelModelParameter.model>
+									</yjs:SideSliderLabelModelParameter>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d7">
+						<x:List>
+							<y:Bend location="908.37220745182,-548.5"/>
+							<y:Bend location="970.738284050168,-548.5"/>
+							<y:Bend location="970.738284050168,-586"/>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="8"/>
+					</data>
+				</edge>
+				<edge id="n0::e19" source="n0::n18" target="n0::n19" sourceport="p2" targetport="p0">
+					<data key="d6">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="13.05078125,9">
+								<y:Label.text>Yes</y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:RotatedSliderLabelModelParameter model="{y:GraphMLReference 9}" segmentRatio="0"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d7">
+						<x:List>
+							<y:Bend location="1165.75353880698,-215"/>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="8"/>
+					</data>
+				</edge>
+				<edge id="n0::e20" source="n0::n19" target="n0::n20" sourceport="p1" targetport="p0">
+					<data key="d6">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="13.05078125,9">
+								<y:Label.text>Yes</y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:RotatedSliderLabelModelParameter model="{y:GraphMLReference 9}" segmentRatio="0"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="8"/>
+					</data>
+				</edge>
+				<edge id="n0::e21" source="n0::n18" target="n0::n21" sourceport="p3" targetport="p0">
+					<data key="d6">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="10.2265625,9">
+								<y:Label.text>No</y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:RotatedSliderLabelModelParameter model="{y:GraphMLReference 10}" segmentRatio="0"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n0::e22" source="n0::n19" target="n0::n21" sourceport="p2" targetport="p1">
+					<data key="d6">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="10.2265625,9">
+								<y:Label.text>No</y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:RotatedSliderLabelModelParameter model="{y:GraphMLReference 9}" segmentRatio="0"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d7">
+						<x:List>
+							<y:Bend location="1288.30531812787,-258.5"/>
+							<y:Bend location="1412.30698004283,-258.5"/>
+						</x:List>
+					</data>
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+			</graph>
+		</node>
+		<node id="n1">
+			<data key="d2">
+				<y:RectD x="-80" y="-862" width="1738.013179516672" height="92"/>
+			</data>
+			<data key="d3">
+				<bpmn:PoolNodeStyle>
+					<yjs:TableNodeStyle tableRenderingOrder="ROWS_FIRST" backgroundStyle="{y:GraphMLReference 13}">
+						<yjs:TableNodeStyle.table>
+							<y:Table insets="20,0,0,0" rowDefaults="{y:GraphMLReference 11}" columnDefaults="{y:GraphMLReference 12}">
+								<y:Table.rows>
+									<y:Row minimumSize="50" size="92" insets="40,0,0,0" style="{y:GraphMLReference 2}">
+										<y:Row.labels>
+											<y:Label labelModelParameter="{x:Static yjs:StretchStripeLabelModel.WEST}" style="{y:GraphMLReference 1}" preferredSize="52.03125,21">
+												<y:Label.text><![CDATA[Tap Requester
+(Customer)]]></y:Label.text>
+											</y:Label>
+										</y:Row.labels>
+									</y:Row>
+								</y:Table.rows>
+								<y:Table.columns>
+									<y:Column style="{y:GraphMLReference 3}" minimumSize="10" size="1678.013179516672"/>
+								</y:Table.columns>
+							</y:Table>
+						</yjs:TableNodeStyle.table>
+					</yjs:TableNodeStyle>
+				</bpmn:PoolNodeStyle>
+			</data>
+			<graph id="n1:" edgedefault="directed">
+				<node id="n1::n0">
+					<data key="d2">
+						<y:RectD x="0" y="-830" width="30" height="30"/>
+					</data>
+					<data key="d3">
+						<bpmn:EventNodeStyle minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n1::n1">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="29.7890625,21">
+								<y:Label.text><![CDATA[Contact
+Provider]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="70" y="-835" width="60" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0,0.5"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n1::n2">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="41.359375,33">
+								<y:Label.text><![CDATA[Complete
+Appropriate
+Request]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="414.5089378770267" y="-835" width="60" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0,0.5"/>
+						</data>
+					</port>
+					<port name="p2">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0.283333333333334"/>
+						</data>
+					</port>
+					<port name="p3">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n1::n3">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="47.5859375,33">
+								<y:Label.text><![CDATA[Receive and
+Acknowledge
+Referral]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="1374.1373340838177" y="-835" width="76.3392919180178" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.230350878789773,0.5"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.230350878789773,0.5"/>
+						</data>
+					</port>
+					<port name="p2"/>
+					<port name="p3">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p4">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n1::n4">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="5.3359375,9">
+								<y:Label.text>A</y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:ExteriorLabelModelParameter position="NORTH">
+										<yjs:ExteriorLabelModelParameter.model>
+											<yjs:ExteriorLabelModel/>
+										</yjs:ExteriorLabelModelParameter.model>
+									</yjs:ExteriorLabelModelParameter>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="1608.013179516672" y="-830" width="30" height="30"/>
+					</data>
+					<data key="d3">
+						<bpmn:EventNodeStyle characteristic="CATCHING" minimumSize="20,20"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<node id="n1::n5">
+					<data key="d1">
+						<x:List>
+							<y:Label style="{y:GraphMLReference 5}" preferredSize="47.5859375,21">
+								<y:Label.text><![CDATA[Receive and 
+Acknowledge]]></y:Label.text>
+								<y:Label.labelModelParameter>
+									<yjs:InteriorLabelModelParameter position="CENTER" model="{y:GraphMLReference 4}"/>
+								</y:Label.labelModelParameter>
+							</y:Label>
+						</x:List>
+					</data>
+					<data key="d2">
+						<y:RectD x="1491.6738875986541" y="-835" width="76.3392919180178" height="40"/>
+					</data>
+					<data key="d3">
+						<bpmn:ActivityNodeStyle minimumSize="40,40"/>
+					</data>
+					<port name="p0">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="-0.5,0"/>
+						</data>
+					</port>
+					<port name="p1">
+						<data key="d10">
+							<yjs:NodeScaledParameter offset="0.5,0"/>
+						</data>
+					</port>
+				</node>
+				<edge id="n1::e0" source="n1::n0" target="n1::n1" sourceport="p0" targetport="p0">
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n1::e1" source="n1::n1" target="n1::n2" sourceport="p2" targetport="p0">
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n1::e2" source="n1::n2" target="n1::n3" sourceport="p3" targetport="p3">
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n1::e3" source="n1::n3" target="n1::n5" sourceport="p4" targetport="p0">
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+				<edge id="n1::e4" source="n1::n5" target="n1::n4" sourceport="p1" targetport="p0">
+					<data key="d8">
+						<y:GraphMLReference resourceKey="7"/>
+					</data>
+				</edge>
+			</graph>
+		</node>
+		<edge id="e0" source="n1::n1" target="n0::n2" sourceport="p1" targetport="p1">
+			<data key="d8">
+				<y:GraphMLReference resourceKey="14"/>
+			</data>
+		</edge>
+		<edge id="e1" source="n0::n0" target="n1::n2" sourceport="p0" targetport="p2">
+			<data key="d7">
+				<x:List>
+					<y:Bend location="318.169645959009,-803.666666666667"/>
+				</x:List>
+			</data>
+			<data key="d8">
+				<y:GraphMLReference resourceKey="14"/>
+			</data>
+		</edge>
+		<edge id="e2" source="n1::n2" target="n0::n4" sourceport="p1" targetport="p0">
+			<data key="d8">
+				<y:GraphMLReference resourceKey="14"/>
+			</data>
+		</edge>
+		<edge id="e3" source="n0::n11" target="n1::n3" sourceport="p0" targetport="p0">
+			<data key="d8">
+				<y:GraphMLReference resourceKey="14"/>
+			</data>
+		</edge>
+		<edge id="e4" source="n1::n3" target="n0::n11" sourceport="p1" targetport="p1">
+			<data key="d8">
+				<y:GraphMLReference resourceKey="14"/>
+			</data>
+		</edge>
+	</graph>
+</graphml>

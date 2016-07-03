@@ -1,0 +1,1617 @@
+ansible-playbook playbook.yml --connection=local
+
+PLAY [localhost] ***************************************************************
+
+TASK [setup] *******************************************************************
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/check_requirements.yml for localhost
+
+TASK [cis : Check if OS is Debian-based (we do not support others)] ************
+ok: [localhost] => {
+  "failed": false,
+  "failed_when_result": false,
+  "msg": "Check OS family"
+}
+
+TASK [cis : Check if Ansible version is supported] *****************************
+ok: [localhost] => {
+  "failed": false,
+  "failed_when_result": false,
+  "msg": "Check Ansible version"
+}
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_01.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_01_level1.yml for localhost
+
+TASK [cis : 1.1.1 Install Updates, Patches and Additional Security Software (Not Scored)] ***
+ok: [localhost]
+
+TASK [cis : 1.1.2 Install Updates, Patches and Additional Security Software (Not Scored)] ***
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_02.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_02_level1.yml for localhost
+
+TASK [cis : 2.1 Create Separate Partition for /tmp (Scored)] *******************
+ok: [localhost]
+
+TASK [cis : 2.2 - 4 Set nodev, nosuid, noexec option for /tmp Partition (Scored)] ***
+skipping: [localhost]
+
+TASK [cis : 2.5 Create Separate Partition for /var (Scored)] *******************
+ok: [localhost]
+
+TASK [cis : 2.6 Bind Mount the /var/tmp directory to /tmp (Scored)] ************
+skipping: [localhost]
+
+TASK [cis : 2.7 Create Separate Partition for /var/log (Scored)] ***************
+fatal: [localhost]: FAILED! => {"changed": false, "cmd": ["grep", "\\s/var\\/log\\s", "/etc/fstab"], "delta": "0:00:00.001979", "end": "2016-06-28 07:48:39.575784", "failed": true, "failed_when_result": true, "rc": 1, "start": "2016-06-28 07:48:39.573805", "stderr": "", "stdout": "", "stdout_lines": [], "warnings": []}
+...ignoring
+
+TASK [cis : 2.8 Create Separate Partition for /var/log/audit (Scored)] *********
+ok: [localhost]
+
+TASK [cis : 2.9 Create Separate Partition for /home (Scored)] ******************
+ok: [localhost]
+
+TASK [cis : 2.10 Add nodev Option to /home (Scored)] ***************************
+skipping: [localhost]
+
+TASK [cis : 2.11 Add nodev Option to Removable Media Partitions (Not Scored)] **
+ok: [localhost] => {
+  "msg": "/!\\ Ensure removable partitions have nodev option"
+}
+
+TASK [cis : 2.12 Add noexec Option to Removable Media Partitions (Not Scored)] *
+ok: [localhost] => {
+  "msg": "/!\\ Ensure removable partitions have noexec option"
+}
+
+TASK [cis : 2.13 Add nosuid Option to Removable Media Partitions (Not Scored)] *
+ok: [localhost] => {
+  "msg": "/!\\ Ensure removable partitions have nosuid option"
+}
+
+TASK [cis : 2.14 - 16 Add nodev Option to /run/shm Partition (Scored)] *********
+ok: [localhost]
+
+TASK [cis : 2.17.1 Set Sticky Bit on All World-Writable Directories (preparation) (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 2.17.2 Set Sticky Bit on All World-Writable Directories (Scored)] **
+ok: [localhost] => (item=/run/shm)
+ok: [localhost] => (item=/run/lock)
+ok: [localhost] => (item=/root/.dotpermissive)
+ok: [localhost] => (item=/tmp)
+ok: [localhost] => (item=/run/lock)
+ok: [localhost] => (item=/run/shm)
+ok: [localhost] => (item=/var/crash)
+ok: [localhost] => (item=/var/metrics)
+ok: [localhost] => (item=/var/tmp)
+ok: [localhost] => (item=/tmp)
+ok: [localhost] => (item=/tmp/wordwritabledir)
+
+TASK [cis : 2.25 Disable Automounting (stat) (Scored)] *************************
+ok: [localhost]
+
+TASK [cis : 2.25 Disable Automounting (Scored)] ********************************
+skipping: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_02_level2.yml for localhost
+
+TASK [cis : 2.18 Disable Mounting of cramfs Filesystems (Not Scored)] **********
+ok: [localhost]
+
+TASK [cis : 2.19 Disable Mounting of freevxfs Filesystems (Not Scored)] ********
+ok: [localhost]
+
+TASK [cis : 2.20 Disable Mounting of jffs2 Filesystems (Not Scored)] ***********
+ok: [localhost]
+
+TASK [cis : 2.21 Disable Mounting of hfs Filesystems (Not Scored)] *************
+ok: [localhost]
+
+TASK [cis : 2.22 Disable Mounting of hfsplus Filesystems (Not Scored)] *********
+ok: [localhost]
+
+TASK [cis : 2.23 Disable Mounting of squashfs Filesystems (Not Scored)] ********
+ok: [localhost]
+
+TASK [cis : 2.24 Disable Mounting of udf Filesystems (Not Scored)] *************
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_03.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_03_level1.yml for localhost
+
+TASK [cis : 3.0 Check for /boot/grub/grub.cfg file (Not Scored)] ***************
+ok: [localhost]
+
+TASK [cis : 3.3.1.1 Set Boot Loader Superuser (check) (Scored)] ****************
+ok: [localhost]
+
+TASK [cis : 3.3.1.2 Set Boot Loader Superuser (Scored)] ************************
+skipping: [localhost]
+
+TASK [cis : 3.3.2.1 Set Boot Loader Password (check) (Scored)] *****************
+ok: [localhost]
+
+TASK [cis : 3.3.2.2 Set Boot Loader Password (Scored)] *************************
+skipping: [localhost]
+
+TASK [cis : 3.3.3 Disable password protection booting (Scored)] ****************
+ok: [localhost]
+
+TASK [cis : 3.3.4 Update Grub configuration (Scored)] **************************
+skipping: [localhost]
+
+TASK [cis : 3.4.1 Require Authentication for Single-User Mode (check) (Scored)]
+ok: [localhost]
+
+TASK [cis : 3.4.2 Require Authentication for Single-User Mode (Scored)] ********
+skipping: [localhost]
+
+TASK [cis : 3.1 Set User/Group Owner on bootloader config (Scored)] ************
+ok: [localhost]
+
+TASK [cis : 3.2 Set Permissions on bootloader config (Scored)] *****************
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_04.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_04_level1.yml for localhost
+
+TASK [cis : 4.1.1 Restrict Core Dumps (Scored)] ********************************
+ok: [localhost]
+
+TASK [cis : 4.1.2 Restrict Core Dumps (Scored)] ********************************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need more than 1 value to unpack
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_lLGXIg/ansible_module_sysctl.py\", line 363, in <module>\n    main()\n  File \"/tmp/ansible_lLGXIg/ansible_module_sysctl.py\", line 356, in main\n    result = SysctlModule(module)\n  File \"/tmp/ansible_lLGXIg/ansible_module_sysctl.py\", line 118, in __init__\n    self.process()\n  File \"/tmp/ansible_lLGXIg/ansible_module_sysctl.py\", line 138, in process\n    self.read_sysctl_file()\n  File \"/tmp/ansible_lLGXIg/ansible_module_sysctl.py\", line 289, in read_sysctl_file\n    k, v = line.split('=',1)\nValueError: need more than 1 value to unpack\n", "module_stdout": "", "msg": "MODULE FAILURE", "parsed": false}
+...ignoring
+
+TASK [cis : 4.1.4 Restrict Core Dumps (stat file) (Scored)] ********************
+ok: [localhost]
+
+TASK [cis : 4.1.5 Restrict Core Dumps (Scored)] ********************************
+ok: [localhost]
+
+TASK [cis : 4.1.6 Restrict Core Dumps (stat file) (Scored)] ********************
+ok: [localhost]
+
+TASK [cis : 4.1.7 Restrict Core Dumps (Scored)] ********************************
+ok: [localhost]
+
+TASK [cis : 4.2 Enable XD/NX Support on 32-bit x86 Systems (read dmesg) (Not Scored)] ***
+ok: [localhost]
+
+TASK [cis : 4.3 Enable Randomized Virtual Memory Region Placement (Scored)] ****
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need more than 1 value to unpack
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_QeHXqC/ansible_module_sysctl.py\", line 363, in <module>\n    main()\n  File \"/tmp/ansible_QeHXqC/ansible_module_sysctl.py\", line 356, in main\n    result = SysctlModule(module)\n  File \"/tmp/ansible_QeHXqC/ansible_module_sysctl.py\", line 118, in __init__\n    self.process()\n  File \"/tmp/ansible_QeHXqC/ansible_module_sysctl.py\", line 138, in process\n    self.read_sysctl_file()\n  File \"/tmp/ansible_QeHXqC/ansible_module_sysctl.py\", line 289, in read_sysctl_file\n    k, v = line.split('=',1)\nValueError: need more than 1 value to unpack\n", "module_stdout": "", "msg": "MODULE FAILURE", "parsed": false}
+to retry, use: --limit @playbook.retry
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=48   changed=0    unreachable=0    failed=1
+
+root@ip-10-0-210-65:/home/ubuntu/ansible/roles-ubuntu# nano roles/cis/tasks/section_04_level1.yml
+root@ip-10-0-210-65:/home/ubuntu/ansible/roles-ubuntu# ansible-playbook playbook.yml --connection=local
+[WARNING]: Host file not found: /etc/ansible/hosts
+
+[WARNING]: provided hosts list is empty, only localhost is available
+
+
+PLAY [localhost] ***************************************************************
+
+TASK [setup] *******************************************************************
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/check_requirements.yml for localhost
+
+TASK [cis : Check if OS is Debian-based (we do not support others)] ************
+ok: [localhost] => {
+  "failed": false,
+  "failed_when_result": false,
+  "msg": "Check OS family"
+}
+
+TASK [cis : Check if Ansible version is supported] *****************************
+ok: [localhost] => {
+  "failed": false,
+  "failed_when_result": false,
+  "msg": "Check Ansible version"
+}
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_01.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_01_level1.yml for localhost
+
+TASK [cis : 1.1.1 Install Updates, Patches and Additional Security Software (Not Scored)] ***
+ok: [localhost]
+
+TASK [cis : 1.1.2 Install Updates, Patches and Additional Security Software (Not Scored)] ***
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_02.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_02_level1.yml for localhost
+
+TASK [cis : 2.1 Create Separate Partition for /tmp (Scored)] *******************
+ok: [localhost]
+
+TASK [cis : 2.2 - 4 Set nodev, nosuid, noexec option for /tmp Partition (Scored)] ***
+skipping: [localhost]
+
+TASK [cis : 2.5 Create Separate Partition for /var (Scored)] *******************
+ok: [localhost]
+
+TASK [cis : 2.6 Bind Mount the /var/tmp directory to /tmp (Scored)] ************
+skipping: [localhost]
+
+TASK [cis : 2.7 Create Separate Partition for /var/log (Scored)] ***************
+fatal: [localhost]: FAILED! => {"changed": false, "cmd": ["grep", "\\s/var\\/log\\s", "/etc/fstab"], "delta": "0:00:00.002156", "end": "2016-06-28 07:50:04.857975", "failed": true, "failed_when_result": true, "rc": 1, "start": "2016-06-28 07:50:04.855819", "stderr": "", "stdout": "", "stdout_lines": [], "warnings": []}
+...ignoring
+
+TASK [cis : 2.8 Create Separate Partition for /var/log/audit (Scored)] *********
+ok: [localhost]
+
+TASK [cis : 2.9 Create Separate Partition for /home (Scored)] ******************
+ok: [localhost]
+
+TASK [cis : 2.10 Add nodev Option to /home (Scored)] ***************************
+skipping: [localhost]
+
+TASK [cis : 2.11 Add nodev Option to Removable Media Partitions (Not Scored)] **
+ok: [localhost] => {
+  "msg": "/!\\ Ensure removable partitions have nodev option"
+}
+
+TASK [cis : 2.12 Add noexec Option to Removable Media Partitions (Not Scored)] *
+ok: [localhost] => {
+  "msg": "/!\\ Ensure removable partitions have noexec option"
+}
+
+TASK [cis : 2.13 Add nosuid Option to Removable Media Partitions (Not Scored)] *
+ok: [localhost] => {
+  "msg": "/!\\ Ensure removable partitions have nosuid option"
+}
+
+TASK [cis : 2.14 - 16 Add nodev Option to /run/shm Partition (Scored)] *********
+ok: [localhost]
+
+TASK [cis : 2.17.1 Set Sticky Bit on All World-Writable Directories (preparation) (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 2.17.2 Set Sticky Bit on All World-Writable Directories (Scored)] **
+ok: [localhost] => (item=/run/shm)
+ok: [localhost] => (item=/run/lock)
+ok: [localhost] => (item=/root/.dotpermissive)
+ok: [localhost] => (item=/tmp)
+ok: [localhost] => (item=/run/lock)
+ok: [localhost] => (item=/run/shm)
+ok: [localhost] => (item=/var/crash)
+ok: [localhost] => (item=/var/metrics)
+ok: [localhost] => (item=/var/tmp)
+ok: [localhost] => (item=/tmp)
+ok: [localhost] => (item=/tmp/wordwritabledir)
+
+TASK [cis : 2.25 Disable Automounting (stat) (Scored)] *************************
+ok: [localhost]
+
+TASK [cis : 2.25 Disable Automounting (Scored)] ********************************
+skipping: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_02_level2.yml for localhost
+
+TASK [cis : 2.18 Disable Mounting of cramfs Filesystems (Not Scored)] **********
+ok: [localhost]
+
+TASK [cis : 2.19 Disable Mounting of freevxfs Filesystems (Not Scored)] ********
+ok: [localhost]
+
+TASK [cis : 2.20 Disable Mounting of jffs2 Filesystems (Not Scored)] ***********
+ok: [localhost]
+
+TASK [cis : 2.21 Disable Mounting of hfs Filesystems (Not Scored)] *************
+ok: [localhost]
+
+TASK [cis : 2.22 Disable Mounting of hfsplus Filesystems (Not Scored)] *********
+ok: [localhost]
+
+TASK [cis : 2.23 Disable Mounting of squashfs Filesystems (Not Scored)] ********
+ok: [localhost]
+
+TASK [cis : 2.24 Disable Mounting of udf Filesystems (Not Scored)] *************
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_03.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_03_level1.yml for localhost
+
+TASK [cis : 3.0 Check for /boot/grub/grub.cfg file (Not Scored)] ***************
+ok: [localhost]
+
+TASK [cis : 3.3.1.1 Set Boot Loader Superuser (check) (Scored)] ****************
+ok: [localhost]
+
+TASK [cis : 3.3.1.2 Set Boot Loader Superuser (Scored)] ************************
+skipping: [localhost]
+
+TASK [cis : 3.3.2.1 Set Boot Loader Password (check) (Scored)] *****************
+ok: [localhost]
+
+TASK [cis : 3.3.2.2 Set Boot Loader Password (Scored)] *************************
+skipping: [localhost]
+
+TASK [cis : 3.3.3 Disable password protection booting (Scored)] ****************
+ok: [localhost]
+
+TASK [cis : 3.3.4 Update Grub configuration (Scored)] **************************
+skipping: [localhost]
+
+TASK [cis : 3.4.1 Require Authentication for Single-User Mode (check) (Scored)]
+ok: [localhost]
+
+TASK [cis : 3.4.2 Require Authentication for Single-User Mode (Scored)] ********
+skipping: [localhost]
+
+TASK [cis : 3.1 Set User/Group Owner on bootloader config (Scored)] ************
+ok: [localhost]
+
+TASK [cis : 3.2 Set Permissions on bootloader config (Scored)] *****************
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_04.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_04_level1.yml for localhost
+
+TASK [cis : 4.1.1 Restrict Core Dumps (Scored)] ********************************
+ok: [localhost]
+
+TASK [cis : 4.1.2 Restrict Core Dumps (Scored)] ********************************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need more than 1 value to unpack
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_asVfqJ/ansible_module_sysctl.py\", line 363, in <module>\n    main()\n  File \"/tmp/ansible_asVfqJ/ansible_module_sysctl.py\", line 356, in main\n    result = SysctlModule(module)\n  File \"/tmp/ansible_asVfqJ/ansible_module_sysctl.py\", line 118, in __init__\n    self.process()\n  File \"/tmp/ansible_asVfqJ/ansible_module_sysctl.py\", line 138, in process\n    self.read_sysctl_file()\n  File \"/tmp/ansible_asVfqJ/ansible_module_sysctl.py\", line 289, in read_sysctl_file\n    k, v = line.split('=',1)\nValueError: need more than 1 value to unpack\n", "module_stdout": "", "msg": "MODULE FAILURE", "parsed": false}
+...ignoring
+
+TASK [cis : 4.1.4 Restrict Core Dumps (stat file) (Scored)] ********************
+ok: [localhost]
+
+TASK [cis : 4.1.5 Restrict Core Dumps (Scored)] ********************************
+ok: [localhost]
+
+TASK [cis : 4.1.6 Restrict Core Dumps (stat file) (Scored)] ********************
+ok: [localhost]
+
+TASK [cis : 4.1.7 Restrict Core Dumps (Scored)] ********************************
+ok: [localhost]
+
+TASK [cis : 4.2 Enable XD/NX Support on 32-bit x86 Systems (read dmesg) (Not Scored)] ***
+ok: [localhost]
+
+TASK [cis : 4.3 Enable Randomized Virtual Memory Region Placement (Scored)] ****
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need more than 1 value to unpack
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_6cQcOj/ansible_module_sysctl.py\", line 363, in <module>\n    main()\n  File \"/tmp/ansible_6cQcOj/ansible_module_sysctl.py\", line 356, in main\n    result = SysctlModule(module)\n  File \"/tmp/ansible_6cQcOj/ansible_module_sysctl.py\", line 118, in __init__\n    self.process()\n  File \"/tmp/ansible_6cQcOj/ansible_module_sysctl.py\", line 138, in process\n    self.read_sysctl_file()\n  File \"/tmp/ansible_6cQcOj/ansible_module_sysctl.py\", line 289, in read_sysctl_file\n    k, v = line.split('=',1)\nValueError: need more than 1 value to unpack\n", "module_stdout": "", "msg": "MODULE FAILURE", "parsed": false}
+...ignoring
+
+TASK [cis : 4.4 Disable Prelink (check) (Scored)] ******************************
+ok: [localhost]
+
+TASK [cis : 4.4 Disable Prelink (restore) (Scored)] ****************************
+skipping: [localhost]
+
+TASK [cis : 4.4 Disable Prelink (remove) (Scored)] *****************************
+skipping: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_04_level2.yml for localhost
+
+TASK [cis : Check if the grub config file exists (Not Scored)] *****************
+ok: [localhost]
+
+TASK [cis : Determines if apparmor is set in grub config (Not Scored)] *********
+ok: [localhost]
+
+TASK [cis : Check if the extlinux config file exists (Not Scored)] *************
+ok: [localhost]
+
+TASK [cis : Determines if apparmor is set in extlinux (Not Scored)] ************
+skipping: [localhost]
+
+TASK [cis : Determines if apparmor is already set in boot config (Not Scored)] *
+ok: [localhost]
+
+TASK [cis : 4.5 Activate AppArmor (install) (Scored)] **************************
+ok: [localhost]
+
+TASK [cis : 4.5 Activate AppArmor (Kernel LSM - grub) (Scored)] ****************
+skipping: [localhost]
+
+TASK [cis : 4.5 Activate AppArmor (Kernel LSM - extlinux) (Scored)] ************
+skipping: [localhost]
+
+TASK [cis : 4.5 Activate AppArmor (start) (Scored)] ****************************
+ok: [localhost]
+
+TASK [cis : 4.5 Determine if Apparmor started without error (Not Scored)] ******
+skipping: [localhost]
+
+TASK [cis : 4.5 Fix rsyslog /run/utmp permissions (Not Scored)] ****************
+ok: [localhost]
+
+TASK [cis : 4.5 Activate AppArmor (fix profiles) (Scored)] *********************
+ok: [localhost]
+
+TASK [cis : 4.5 Activate AppArmor (Scored)] ************************************
+ok: [localhost]
+
+TASK [cis : 4.5 Activate AppArmor (enforce install) (Scored)] ******************
+ok: [localhost]
+
+TASK [cis : 4.5 Activate AppArmor (enforce) (Scored)] **************************
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_05.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_05_level1.yml for localhost
+
+TASK [cis : 5.1.1 Ensure NIS is not installed (Scored)] ************************
+ok: [localhost]
+
+TASK [cis : 5.1.2 Ensure rsh, rlogin, rexec, talk, telnet, chargen, daytime, echo, discard, time is not enabled (stat inetd) (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 5.1.2-.6 Ensure rsh, rlogin, rexec, talk, telnet, chargen, daytime, echo, discard, time is not enabled (Scored)] ***
+ok: [localhost] => (item=shell)
+ok: [localhost] => (item=login)
+ok: [localhost] => (item=exec)
+ok: [localhost] => (item=talk)
+ok: [localhost] => (item=ntalk)
+ok: [localhost] => (item=telnet)
+ok: [localhost] => (item=chargen)
+ok: [localhost] => (item=daytime)
+ok: [localhost] => (item=echo)
+ok: [localhost] => (item=discard)
+ok: [localhost] => (item=time)
+
+TASK [cis : 5.1.3.1 Ensure rsh client is not installed (Scored)] ***************
+ok: [localhost]
+
+TASK [cis : 5.1.3.2 Ensure rsh client is not installed (Scored)] ***************
+ok: [localhost]
+
+TASK [cis : 5.1.5 Ensure talk client is not installed (Scored)] ****************
+ok: [localhost]
+
+TASK [cis : 5.1.8 Ensure xinetd is not enabled (stat xinetd) (Scored)] *********
+ok: [localhost]
+
+TASK [cis : 5.1.8 Ensure xinetd is not enabled (Scored)] ***********************
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_06.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_06_level1.yml for localhost
+
+TASK [cis : 6.1 Ensure the X Window system is not installed (Scored)] **********
+ok: [localhost]
+
+TASK [cis : 6.2 Ensure Avahi Server is not enabled (check) (Scored)] ***********
+ok: [localhost]
+
+TASK [cis : 6.2 Ensure Avahi Server is not enabled (Scored)] *******************
+skipping: [localhost]
+
+TASK [cis : 6.3 Ensure print server is not enabled (check) (Not Scored)] *******
+ok: [localhost]
+
+TASK [cis : 6.3 Ensure print server is not enabled (Not Scored)] ***************
+skipping: [localhost]
+
+TASK [cis : 6.4.1 Ensure DHCP Server is not enabled (check) (Scored)] **********
+ok: [localhost]
+
+TASK [cis : 6.4.1 Ensure DHCP Server is not enabled (Scored)] ******************
+skipping: [localhost]
+
+TASK [cis : 6.4.2 Ensure DHCP Server is not enabled (check) (Scored)] **********
+ok: [localhost]
+
+TASK [cis : 6.4.2 Ensure DHCP Server is not enabled (Scored)] ******************
+skipping: [localhost]
+
+TASK [cis : 6.5.1 Configure Network Time Protocol (install) (NTP) (Scored)] ****
+ok: [localhost]
+
+TASK [cis : 6.5.1 Check if /etc/ntp.conf file exists (stat)] *******************
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_06_level1_05.yml for localhost
+
+TASK [cis : 6.5.2 Configure Network Time Protocol (restrict4) (NTP) (Scored)] **
+ok: [localhost]
+
+TASK [cis : 6.5.3 Configure Network Time Protocol (restrict6) (NTP) (Scored)] **
+ok: [localhost]
+
+TASK [cis : 6.5.4 Configure Network Time Protocol (server check) (NTP) (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 6.5.4 Configure Network Time Protocol (server add) (NTP) (Scored)] *
+skipping: [localhost]
+
+TASK [cis : 6.6 Ensure LDAP is not enabled (Not Scored)] ***********************
+ok: [localhost]
+
+TASK [cis : 6.7.1 Ensure NFS and RPC are not enabled (stat) (Not Scored)] ******
+ok: [localhost]
+
+TASK [cis : 6.7.2 Ensure NFS and RPC are not enabled (Not Scored)] *************
+ok: [localhost]
+
+TASK [cis : 6.7.2 Ensure NFS and RPC are not enabled (check) (Not Scored)] *****
+ok: [localhost]
+
+TASK [cis : 6.7.2 Ensure NFS and RPC are not enabled (rc.d) (Not Scored)] ******
+skipping: [localhost]
+
+TASK [cis : 6.8-14 Ensure DNS,FTP,HTTP,IMAP,POP,Samba,Proxy,SNMP Servers are not enabled (Not Scored)] ***
+ok: [localhost] => (item=bind9)
+ok: [localhost] => (item=vsftpd)
+ok: [localhost] => (item=apache2)
+ok: [localhost] => (item=dovecot)
+ok: [localhost] => (item=smbd)
+ok: [localhost] => (item=squid3)
+ok: [localhost] => (item=snmpd)
+
+TASK [cis : 6.15 Configure Mail Transfer Agent for Local-Only Mode (stat) (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 6.15 Configure Mail Transfer Agent for Local-Only Mode (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 6.16 Ensure rsync service is not enabled (stat) (Scored)] **********
+ok: [localhost]
+
+TASK [cis : 6.16 Ensure rsync service is not enabled (Scored)] *****************
+ok: [localhost]
+
+TASK [cis : 6.17 Ensure Biosdevname is not enabled (Scored)] *******************
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_07.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_07_level1.yml for localhost
+
+TASK [cis : 7.1.1 Disable IP Forwarding (Scored)] ******************************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need more than 1 value to unpack
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_94ax4c/ansible_module_sysctl.py\", line 363, in <module>\n    main()\n  File \"/tmp/ansible_94ax4c/ansible_module_sysctl.py\", line 356, in main\n    result = SysctlModule(module)\n  File \"/tmp/ansible_94ax4c/ansible_module_sysctl.py\", line 118, in __init__\n    self.process()\n  File \"/tmp/ansible_94ax4c/ansible_module_sysctl.py\", line 138, in process\n    self.read_sysctl_file()\n  File \"/tmp/ansible_94ax4c/ansible_module_sysctl.py\", line 289, in read_sysctl_file\n    k, v = line.split('=',1)\nValueError: need more than 1 value to unpack\n", "module_stdout": "", "msg": "MODULE FAILURE", "parsed": false}
+to retry, use: --limit @playbook.retry
+
+TASK [cis : 7.1.2.1 Disable Send Packet Redirects (Scored)] ********************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.1.2.2 Disable Send Packet Redirects (Scored)] ********************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.2.1.1 Disable Source Routed Packet Acceptance (Scored)] **********
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.2.1.2 Disable Source Routed Packet Acceptance (Scored)] **********
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.2.2.1 Disable ICMP Redirect Acceptance (Scored)] *****************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.2.2.2 Disable ICMP Redirect Acceptance (Scored)] *****************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.2.3.1 Disable Secure ICMP Redirect Acceptance (Scored)] **********
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.2.3.2 Disable Secure ICMP Redirect Acceptance (Scored)] **********
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.2.4.1 Log Suspicious Packets (Scored)] ***************************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.2.4.2 Log Suspicious Packets (Scored)] ***************************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.2.5 Enable Ignore Broadcast Requests (Scored)] *******************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.2.6 Enable Bad Error Message Protection (Scored)] ****************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.2.7.1 Enable RFC-recommended Source Route Validation (Scored)] ***
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.2.7.2 Enable RFC-recommended Source Route Validation (Scored)] ***
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.2.8 Enable TCP SYN Cookies (Scored)] *****************************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.3.1.1 Disable IPv6 Router Advertisements (Not Scored)] ***********
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.3.1.2 Disable IPv6 Router Advertisements (Not Scored)] ***********
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.3.2.1 Disable IPv6 Redirect Acceptance (Not Scored)] *************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.3.2.2 Disable IPv6 Redirect Acceptance (Not Scored)] *************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need mo$
+fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "module_stderr": "Traceback (most recent call last$
+...ignoring
+
+TASK [cis : 7.3.3 Disable IPv6 (Not Scored)] ***********************************
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need more than 1 value to unpack
+failed: [localhost] (item=net.ipv6.conf.all.disable_ipv6) => {"failed": true, "item": "net.ipv6.conf.all.disable_ipv6", "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_f0VmOp/ansible_module_sysctl.py\", line 363, in <module>\n    main()\n  File \"/tmp/ansible_f0VmOp/ansible_module_sysctl.py\", line 356, in main\n    result = SysctlModule(module)\n  File \"/tmp/ansible_f0VmOp/ansible_module_sysctl.py\", line 118, in __init__\n    self.process()\n  File \"/tmp/ansible_f0VmOp/ansible_module_sysctl.py\", line 138, in process\n    self.read_sysctl_file()\n  File \"/tmp/ansible_f0VmOp/ansible_module_sysctl.py\", line 289, in read_sysctl_file\n    k, v = line.split('=',1)\nValueError: need more than 1 value to unpack\n", "module_stdout": "", "msg": "MODULE FAILURE", "parsed": false}
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need more than 1 value to unpack
+failed: [localhost] (item=net.ipv6.conf.default.disable_ipv6) => {"failed": true, "item": "net.ipv6.conf.default.disable_ipv6", "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_GSO2d4/ansible_module_sysctl.py\", line 363, in <module>\n    main()\n  File \"/tmp/ansible_GSO2d4/ansible_module_sysctl.py\", line 356, in main\n    result = SysctlModule(module)\n  File \"/tmp/ansible_GSO2d4/ansible_module_sysctl.py\", line 118, in __init__\n    self.process()\n  File \"/tmp/ansible_GSO2d4/ansible_module_sysctl.py\", line 138, in process\n    self.read_sysctl_file()\n  File \"/tmp/ansible_GSO2d4/ansible_module_sysctl.py\", line 289, in read_sysctl_file\n    k, v = line.split('=',1)\nValueError: need more than 1 value to unpack\n", "module_stdout": "", "msg": "MODULE FAILURE", "parsed": false}
+An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: need more than 1 value to unpack
+failed: [localhost] (item=net.ipv6.conf.lo.disable_ipv6) => {"failed": true, "item": "net.ipv6.conf.lo.disable_ipv6", "module_stderr": "Traceback (most recent call last):\n  File \"/tmp/ansible_2y09i4/ansible_module_sysctl.py\", line 363, in <module>\n    main()\n  File \"/tmp/ansible_2y09i4/ansible_module_sysctl.py\", line 356, in main\n    result = SysctlModule(module)\n  File \"/tmp/ansible_2y09i4/ansible_module_sysctl.py\", line 118, in __init__\n    self.process()\n  File \"/tmp/ansible_2y09i4/ansible_module_sysctl.py\", line 138, in process\n    self.read_sysctl_file()\n  File \"/tmp/ansible_2y09i4/ansible_module_sysctl.py\", line 289, in read_sysctl_file\n    k, v = line.split('=',1)\nValueError: need more than 1 value to unpack\n", "module_stdout": "", "msg": "MODULE FAILURE", "parsed": false}
+...ignoring
+
+TASK [cis : 7.4.1 Install TCP Wrappers (Scored)] *******************************
+ok: [localhost]
+
+TASK [cis : 7.4.2 Create /etc/hosts.allow (Not Scored)] ************************
+ok: [localhost] => {
+    "msg": "*** Verify /etc/hosts.allow ***"
+}
+
+TASK [cis : 7.4.3 Verify Permissions on /etc/hosts.allow (Scored)] *************
+ok: [localhost]
+
+TASK [cis : 7.4.4 Create /etc/hosts.deny (Not Scored)] *************************
+ok: [localhost] => {
+    "msg": "*** Verify /etc/hosts.deny ***"
+}
+
+TASK [cis : 7.4.5 Verify Permissions on /etc/hosts.deny (Scored)] **************
+ok: [localhost]
+
+TASK [cis : 7.5.0 Ensures /etc/modprobe.d/ exists (Not Scored)] ****************
+ok: [localhost]
+
+TASK [cis : 7.5.1-4 Disable DCCP, SCTP, RDS, TIPC (Not Scored)] ****************
+ok: [localhost] => (item=dccp)
+ok: [localhost] => (item=sctp)
+ok: [localhost] => (item=rds)
+ok: [localhost] => (item=tipc)
+
+TASK [cis : 7.6 Deactivate Wireless Interfaces (Not Scored)] *******************
+ok: [localhost]
+
+TASK [cis : 7.7 Ensure Firewall is active (install) (Scored)] ******************
+ok: [localhost]
+
+TASK [cis : 7.7 Ensure Firewall is active (Scored)] ****************************
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_08.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_08_level1.yml for localhost
+
+TASK [cis : 8.2.1 Install the rsyslog package (Scored)] ************************
+ok: [localhost]
+
+TASK [cis : 8.2.2 Ensure the rsyslog Service is activated (Scored)] ************
+ok: [localhost]
+
+TASK [cis : 8.2.5.2 Configure rsyslog to Send Logs to a Remote Log Host (start rsyslog) (Scored)] ***
+skipping: [localhost]
+
+TASK [cis : 8.2.3 Configure /etc/rsyslog.conf (Not Scored)] ********************
+ok: [localhost] => (item=*.emerg :omusrmsg:*)
+ok: [localhost] => (item=mail.* -/var/log/mail)
+ok: [localhost] => (item=mail.info -/var/log/mail.info)
+ok: [localhost] => (item=mail.warning -/var/log/mail.warn)
+ok: [localhost] => (item=mail.err /var/log/mail.err)
+ok: [localhost] => (item=news.crit -/var/log/news/news.crit)
+ok: [localhost] => (item=news.err -/var/log/news/news.err)
+ok: [localhost] => (item=news.notice -/var/log/news/news.notice)
+ok: [localhost] => (item=*.=warning;*.=err -/var/log/warn)
+ok: [localhost] => (item=*.crit /var/log/warn)
+ok: [localhost] => (item=*.*;mail.none;news.none -/var/log/messages)
+ok: [localhost] => (item=local0,local1.* -/var/log/localmessages)
+ok: [localhost] => (item=local2,local3.* -/var/log/localmessages)
+ok: [localhost] => (item=local4,local5.* -/var/log/localmessages)
+ok: [localhost] => (item=local6,local7.* -/var/log/localmessages)
+
+TASK [cis : 8.2.4.1 Create and Set Permissions on rsyslog Log Files (Scored)] **
+ok: [localhost]
+
+TASK [cis : 8.2.4.2 Create and Set Permissions on rsyslog Log Files (Scored)] **
+ok: [localhost] => (item=/var/log/ufw.log)
+ok: [localhost] => (item=/var/log/kern.log)
+ok: [localhost] => (item=/var/log/cloud-init.log)
+ok: [localhost] => (item=/var/log/syslog)
+ok: [localhost] => (item=/var/log/marathon.log)
+ok: [localhost] => (item=/var/log/auth.log)
+ok: [localhost] => (item=/var/log/syslog)
+ok: [localhost] => (item=/var/log/cron.log)
+ok: [localhost] => (item=/var/log/daemon.log)
+ok: [localhost] => (item=/var/log/kern.log)
+ok: [localhost] => (item=/var/log/lpr.log)
+ok: [localhost] => (item=/var/log/mail.log)
+ok: [localhost] => (item=/var/log/user.log)
+ok: [localhost] => (item=/var/log/mail.info)
+ok: [localhost] => (item=/var/log/mail.warn)
+ok: [localhost] => (item=/var/log/mail.err)
+ok: [localhost] => (item=/var/log/news)
+ok: [localhost] => (item=/var/log/news)
+ok: [localhost] => (item=/var/log/news)
+ok: [localhost] => (item=/var/log/debug)
+ok: [localhost] => (item=/var/log/messages)
+ok: [localhost] => (item=/var/log/mail)
+ok: [localhost] => (item=/var/log/mail.info)
+ok: [localhost] => (item=/var/log/mail.warn)
+ok: [localhost] => (item=/var/log/mail.err)
+ok: [localhost] => (item=/var/log/news)
+ok: [localhost] => (item=/var/log/news)
+ok: [localhost] => (item=/var/log/news)
+ok: [localhost] => (item=/var/log/warn)
+ok: [localhost] => (item=/var/log/warn)
+ok: [localhost] => (item=/var/log/messages)
+ok: [localhost] => (item=/var/log/localmessages)
+ok: [localhost] => (item=/var/log/localmessages)
+ok: [localhost] => (item=/var/log/localmessages)
+ok: [localhost] => (item=/var/log/localmessages)
+
+TASK [cis : 8.2.4.3 Create and Set Permissions on rsyslog Log Files (Scored)] **
+ok: [localhost] => (item=/var/log/ufw.log)
+ok: [localhost] => (item=/var/log/kern.log)
+ok: [localhost] => (item=/var/log/cloud-init.log)
+ok: [localhost] => (item=/var/log/syslog)
+ok: [localhost] => (item=/var/log/marathon.log)
+ok: [localhost] => (item=/var/log/auth.log)
+ok: [localhost] => (item=/var/log/syslog)
+ok: [localhost] => (item=/var/log/cron.log)
+ok: [localhost] => (item=/var/log/daemon.log)
+ok: [localhost] => (item=/var/log/kern.log)
+ok: [localhost] => (item=/var/log/lpr.log)
+ok: [localhost] => (item=/var/log/mail.log)
+ok: [localhost] => (item=/var/log/user.log)
+ok: [localhost] => (item=/var/log/mail.info)
+ok: [localhost] => (item=/var/log/mail.warn)
+ok: [localhost] => (item=/var/log/mail.err)
+ok: [localhost] => (item=/var/log/news)
+ok: [localhost] => (item=/var/log/news)
+ok: [localhost] => (item=/var/log/news)
+ok: [localhost] => (item=/var/log/debug)
+ok: [localhost] => (item=/var/log/messages)
+ok: [localhost] => (item=/var/log/mail)
+ok: [localhost] => (item=/var/log/mail.info)
+ok: [localhost] => (item=/var/log/mail.warn)
+ok: [localhost] => (item=/var/log/mail.err)
+ok: [localhost] => (item=/var/log/news)
+ok: [localhost] => (item=/var/log/news)
+ok: [localhost] => (item=/var/log/news)
+ok: [localhost] => (item=/var/log/warn)
+ok: [localhost] => (item=/var/log/warn)
+ok: [localhost] => (item=/var/log/messages)
+ok: [localhost] => (item=/var/log/localmessages)
+ok: [localhost] => (item=/var/log/localmessages)
+ok: [localhost] => (item=/var/log/localmessages)
+ok: [localhost] => (item=/var/log/localmessages)
+
+TASK [cis : 8.2.5.1 Configure rsyslog to Send Logs to a Remote Log Host (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 8.2.5.2 Configure rsyslog to Send Logs to a Remote Log Host (Scored)] ***
+skipping: [localhost]
+
+TASK [cis : 8.2.6.1 Accept Remote rsyslog Messages Only on Designated Log Hosts (Not Scored)] ***
+ok: [localhost]
+
+TASK [cis : 8.2.6.2 Accept Remote rsyslog Messages Only on Designated Log Hosts (Not Scored)] ***
+skipping: [localhost] => (item=$ModLoad imtcp)
+skipping: [localhost] => (item=$InputTCPServerRun 514)
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_08_level2.yml for localhost
+
+TASK [cis : 8.1.2 Install and Enable auditd Service (Scored)] ******************
+ok: [localhost]
+
+TASK [cis : Check if the file auditd.conf exists (Not Scored)] *****************
+ok: [localhost]
+
+TASK [cis : Create the audit directory if it does not exists (Not Scored)] *****
+skipping: [localhost]
+
+TASK [cis : 8.1.1-3 Configure Data Retention (Not Scored)] *********************
+ok: [localhost] => (item={u'rxp': u'^max_log_file ', u'line': u'max_log_file = 200'})
+ok: [localhost] => (item={u'rxp': u'^space_left_action', u'line': u'space_left_action = email'})
+ok: [localhost] => (item={u'rxp': u'^action_mail_acct', u'line': u'action_mail_acct = root'})
+ok: [localhost] => (item={u'rxp': u'^admin_space_left_action', u'line': u'admin_space_left_action = halt'})
+ok: [localhost] => (item={u'rxp': u'^max_log_file_action', u'line': u'max_log_file_action = keep_logs'})
+
+TASK [cis : 8.1.3 Enable Auditing for Processes That Start Prior to auditd (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 8.1.3 Enable Auditing for Processes That Start Prior to auditd (Scored)] ***
+skipping: [localhost]
+
+TASK [cis : 8.1.3 Enable Auditing for Processes That Start Prior to auditd (Scored)] ***
+skipping: [localhost]
+
+TASK [cis : 8.1.4 Record Events That Modify Date and Time Information (Scored)]
+ok: [localhost] => (item=-a always,exit -F arch=b64 -S adjtimex -S settimeofday -k time-change)
+ok: [localhost] => (item=-a always,exit -F arch=b32 -S adjtimex -S settimeofday -S stime -k time-change)
+ok: [localhost] => (item=-a always,exit -F arch=b64 -S clock_settime -k time-change)
+ok: [localhost] => (item=-a always,exit -F arch=b32 -S clock_settime -k time-change)
+ok: [localhost] => (item=-w /etc/localtime -p wa -k time-change)
+
+TASK [cis : 8.1.4 Record Events That Modify Date and Time Information (Scored)]
+skipping: [localhost] => (item=-a always,exit -F arch=b32 -S adjtimex -S settimeofday -S stime -k time-change)
+skipping: [localhost] => (item=-a always,exit -F arch=b32 -S clock_settime -k time-change)
+skipping: [localhost] => (item=-w /etc/localtime -p wa -k time-change)
+
+TASK [cis : 8.1.5,7,8,9,15,16,17 Record Events That Modify User/Group Information (Scored)] ***
+ok: [localhost] => (item=-w /etc/group -p wa -k identity)
+ok: [localhost] => (item=-w /etc/passwd -p wa -k identity)
+ok: [localhost] => (item=-w /etc/gshadow -p wa -k identity)
+ok: [localhost] => (item=-w /etc/shadow -p wa -k identity)
+ok: [localhost] => (item=-w /etc/security/opasswd -p wa -k identity)
+ok: [localhost] => (item=-w /var/log/faillog -p wa -k logins)
+ok: [localhost] => (item=-w /var/log/lastlog -p wa -k logins)
+ok: [localhost] => (item=-w /var/log/tallylog -p wa -k logins)
+ok: [localhost] => (item=-w /var/run/utmp -p wa -k session)
+ok: [localhost] => (item=-w /var/log/wtmp -p wa -k session)
+ok: [localhost] => (item=-w /var/log/btmp -p wa -k session)
+ok: [localhost] => (item=-w /etc/selinux/ -p wa -k MAC-policy)
+ok: [localhost] => (item=-w /etc/sudoers -p wa -k scope)
+ok: [localhost] => (item=-w /var/log/sudo.log -p wa -k actions)
+ok: [localhost] => (item=-w /sbin/insmod -p x -k modules)
+ok: [localhost] => (item=-w /sbin/rmmod -px -k modules)
+ok: [localhost] => (item=-w /sbin/modprobe -p x -k modules)
+
+TASK [cis : 8.1.6,10,11,13,14,17 Record Events That Modify the System's Network Environment (64b) (Scored)] ***
+ok: [localhost] => (item=-a exit,always -F arch=b64 -S sethostname -S setdomainname -k system-locale)
+ok: [localhost] => (item=-a exit,always -F arch=b32 -S sethostname -S setdomainname -k system-locale)
+ok: [localhost] => (item=-w /etc/issue -p wa -k system-locale)
+ok: [localhost] => (item=-w /etc/issue.net -p wa -k system-locale)
+ok: [localhost] => (item=-w /etc/hosts -p wa -k system-locale)
+ok: [localhost] => (item=-w /etc/network -p wa -k system-locale)
+ok: [localhost] => (item=-a always,exit -F arch=b64 -S chmod -S fchmod -S fchmodat -F auid>=500 -F auid!=4294967295 -k perm_mod)
+ok: [localhost] => (item=-a always,exit -F arch=b32 -S chmod -S fchmod -S fchmodat -F auid>=500 -F auid!=4294967295 -k perm_mod)
+ok: [localhost] => (item=-a always,exit -F arch=b64 -S chown -S fchown -S fchownat -S lchown -F auid>=500 -F auid!=4294967295 -k perm_mod)
+ok: [localhost] => (item=-a always,exit -F arch=b32 -S chown -S fchown -S fchownat -S lchown -F auid>=500 -F auid!=4294967295 -k perm_mod)
+ok: [localhost] => (item=-a always,exit -F arch=b64 -S setxattr -S lsetxattr -S fsetxattr -S removexattr -S lremovexattr -S fremovexattr -F auid>=500 -F auid!=4294967295 -k perm_mod)
+ok: [localhost] => (item=-a always,exit -F arch=b32 -S setxattr -S lsetxattr -S fsetxattr -S removexattr -S lremovexattr -S fremovexattr -F auid>=500 -F auid!=4294967295 -k perm_mod)
+ok: [localhost] => (item=-a always,exit -F arch=b64 -S creat -S open -S openat -S truncate -S ftruncate -F exit=-EACCES -F auid>=500 -F auid!=4294967295 -k access)
+ok: [localhost] => (item=-a always,exit -F arch=b32 -S creat -S open -S openat -S truncate -S ftruncate -F exit=-EACCES -F auid>=500 -F auid!=4294967295 -k access)
+ok: [localhost] => (item=-a always,exit -F arch=b64 -S creat -S open -S openat -S truncate -S ftruncate -F exit=-EPERM -F auid>=500 -F auid!=4294967295 -k access)
+ok: [localhost] => (item=-a always,exit -F arch=b32 -S creat -S open -S openat -S truncate -S ftruncate -F exit=-EPERM -F auid>=500 -F auid!=4294967295 -k access)
+ok: [localhost] => (item=-a always,exit -F arch=b64 -S mount -F auid>=500 -F auid!=4294967295 -k mounts)
+ok: [localhost] => (item=-a always,exit -F arch=b32 -S mount -F auid>=500 -F auid!=4294967295 -k mounts)
+ok: [localhost] => (item=-a always,exit -F arch=b64 -S unlink -S unlinkat -S rename -S renameat -F auid>=500 -F auid!=4294967295 -k delete)
+ok: [localhost] => (item=-a always,exit -F arch=b32 -S unlink -S unlinkat -S rename -S renameat -F auid>=500 -F auid!=4294967295 -k delete)
+ok: [localhost] => (item=-a always,exit -F arch=b64 -S init_module -S delete_module -k modules)
+
+TASK [cis : 8.1.6,10,11,13,14,17 Record Events That Modify the System's Network Environment (32b) (Scored)] ***
+skipping: [localhost] => (item=-a exit,always -F arch=b32 -S sethostname -S setdomainname -k system-locale)
+skipping: [localhost] => (item=-w /etc/issue -p wa -k system-locale)
+skipping: [localhost] => (item=-w /etc/issue.net -p wa -k system-locale)
+skipping: [localhost] => (item=-w /etc/hosts -p wa -k system-locale)
+skipping: [localhost] => (item=-w /etc/network -p wa -k system-locale)
+skipping: [localhost] => (item=-a always,exit -F arch=b32 -S chmod -S fchmod -S fchmodat -F auid>=500 -F auid!=4294967295 -k perm_mod)
+skipping: [localhost] => (item=-a always,exit -F arch=b32 -S chown -S fchown -S fchownat -S lchown -F auid>=500 -F auid!=4294967295 -k perm_mod)
+skipping: [localhost] => (item=-a always,exit -F arch=b32 -S setxattr -S lsetxattr -S fsetxattr -S removexattr -S lremovexattr -S fremovexattr -F auid>=500 -F auid!=4294967295 -k perm_mod)
+skipping: [localhost] => (item=-a always,exit -F arch=b32 -S creat -S open -S openat -S truncate -S ftruncate -F exit=-EACCES -F auid>=500 -F auid!=4294967295 -k access)
+skipping: [localhost] => (item=-a always,exit -F arch=b32 -S creat -S open -S openat -S truncate -S ftruncate -F exit=-EPERM -F auid>=500 -F auid!=4294967295 -k access)
+skipping: [localhost] => (item=-a always,exit -F arch=b32 -S mount -F auid>=500 -F auid!=4294967295 -k mounts)
+skipping: [localhost] => (item=-a always,exit -F arch=b32 -S unlink -S unlinkat -S rename -S renameat -F auid>=500 -F auid!=4294967295 -k delete)
+skipping: [localhost] => (item=-a always,exit -F arch=b32 -S init_module -S delete_module -k modules)
+
+TASK [cis : 8.3.1 Install AIDE (Scored)] ***************************************
+ok: [localhost]
+
+TASK [cis : 8.3.1 Install AIDE (init) (Scored)] ********************************
+skipping: [localhost]
+
+TASK [cis : 8.3.1 Install AIDE (Scored)] ***************************************
+skipping: [localhost]
+
+TASK [cis : 8.3.1 Install AIDE (copy db) (Scored)] *****************************
+skipping: [localhost]
+
+TASK [cis : 8.3.2 Implement Periodic Execution of File Integrity (Scored)] *****
+ok: [localhost]
+
+TASK [cis : 8.1.12 Collect Use of Privileged Commands (Scored)] ****************
+ok: [localhost]
+
+TASK [cis : 8.1.12 Collect Use of Privileged Commands (infos) (Scored)] ********
+ok: [localhost] => (item=-a always,exit -F path=/sbin/unix_chkpwd -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/bin/fusermount -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/bin/mount -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/bin/su -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/bin/ping6 -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/bin/umount -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/bin/ping -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/lib/openssh/ssh-keysign -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/lib/dbus-1.0/dbus-daemon-launch-helper -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/lib/landscape/apt-update -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/lib/eject/dmcrypt-get-device -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/lib/policykit-1/polkit-agent-helper-1 -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/sbin/pppd -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/sbin/postqueue -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/sbin/uuidd -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/sbin/postdrop -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/mtr -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/sudo -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/wall -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/traceroute6.iputils -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/chfn -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/passwd -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/mlocate -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/at -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/mail-unlock -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/chage -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/pkexec -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/ssh-agent -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/chsh -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/gpasswd -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/dotlockfile -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/crontab -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/mail-touchlock -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/mail-lock -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/newgrp -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/bsd-write -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/screen -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+ok: [localhost] => (item=-a always,exit -F path=/usr/bin/expiry -F perm=x -F auid>=500 -F auid!=4294967295 -k privileged)
+
+TASK [cis : 8.1.18 Make the Audit Configuration Immutable (Scored)] ************
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_09.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_09_level1.yml for localhost
+
+TASK [cis : 9.1.1.1 Check that cron conf file exists (check) (Scored)] *********
+ok: [localhost]
+
+TASK [cis : 9.1.1.2 Enable cron Daemon (Scored)] *******************************
+skipping: [localhost]
+
+TASK [cis : 9.1.2 Set User/Group Owner and Permission on /etc/crontab (Scored)]
+ok: [localhost]
+
+TASK [cis : 9.1.3 Set User/Group Owner and Permission on /etc/cron.hourly (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 9.1.4 Set User/Group Owner and Permission on /etc/cron.daily (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 9.1.5 Set User/Group Owner and Permission on /etc/cron.weekly (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 9.1.6 Set User/Group Owner and Permission on /etc/cron.monthly (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 9.1.7 Set User/Group Owner and Permission on /etc/cron.d (Scored)] *
+ok: [localhost]
+
+TASK [cis : 9.1.8 Restrict at/cron to Authorized Users (remove deny) (Scored)] *
+ok: [localhost] => (item=/etc/cron.deny)
+ok: [localhost] => (item=/etc/at.deny)
+
+TASK [cis : 9.1.8 Restrict at/cron to Authorized Users (create cron allow) (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 9.1.8 Restrict at/cron to Authorized Users (create at allow) (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 9.2.1 Set Password Creation Requirement Parameters Using pam_cracklib (install) (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 9.2.1 Set Password Creation Requirement Parameters Using pam_cracklib (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 9.2.2 Set Lockout for Failed Password Attempts (Not Scored)] *******
+ok: [localhost]
+
+TASK [cis : 9.2.3 Limit Password Reuse (Scored)] *******************************
+ok: [localhost]
+
+TASK [cis : 9.3 Check if ssh is installed (check) (Not Scored)] ****************
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_09_level1_03.yml for localhost
+
+TASK [cis : 9.3.1 Set SSH Protocol to 2 (Scored)] ******************************
+ok: [localhost]
+
+TASK [cis : 9.3.2 Set LogLevel to INFO (Scored)] *******************************
+ok: [localhost]
+
+TASK [cis : 9.3.3 Set Permissions on /etc/ssh/sshd_config (Scored)] ************
+ok: [localhost]
+
+TASK [cis : 9.3.{4,7,8,9,10} Disable some SSH options (Scored)] ****************
+ok: [localhost] => (item=X11Forwarding)
+ok: [localhost] => (item=HostbasedAuthentication)
+ok: [localhost] => (item=PermitRootLogin)
+ok: [localhost] => (item=PermitEmptyPasswords)
+ok: [localhost] => (item=PermitUserEnvironment)
+
+TASK [cis : 9.3.5 Set SSH MaxAuthTries to 4 or Less (Scored)] ******************
+ok: [localhost]
+
+TASK [cis : 9.3.6 Set SSH IgnoreRhosts to Yes (Scored)] ************************
+ok: [localhost]
+
+TASK [cis : 9.3.11 Use Only Approved Cipher in Counter Mode (Scored)] **********
+ok: [localhost]
+
+TASK [cis : 9.3.12.1 Set Idle Timeout Interval for User Login (Scored)] ********
+ok: [localhost]
+
+TASK [cis : 9.3.12.2 Set Idle Timeout Interval for User Login (Scored)] ********
+ok: [localhost]
+
+TASK [cis : 9.3.13.1 Limit Access via SSH (Scored)] ****************************
+fatal: [localhost]: FAILED! => {"changed": false, "cmd": "grep AllowUsers /etc/ssh/sshd_config", "delta": "0:00:00.002359", "end": "2016-06-28 08:24:11.559492", "failed": true, "failed_when_result": true, "rc": 1, "start": "2016-06-28 08:24:11.557133", "stderr": "", "stdout": "", "stdout_lines": [], "warnings": []}
+...ignoring
+
+TASK [cis : 9.3.13.2 Limit Access via SSH (Scored)] ****************************
+fatal: [localhost]: FAILED! => {"changed": false, "cmd": "grep AllowGroups /etc/ssh/sshd_config", "delta": "0:00:00.002274", "end": "2016-06-28 08:24:11.731545", "failed": true, "failed_when_result": true, "rc": 1, "start": "2016-06-28 08:24:11.729271", "stderr": "", "stdout": "", "stdout_lines": [], "warnings": []}
+...ignoring
+
+TASK [cis : 9.3.13.3 Limit Access via SSH (Scored)] ****************************
+fatal: [localhost]: FAILED! => {"changed": false, "cmd": "grep DenyUsers /etc/ssh/sshd_config", "delta": "0:00:00.002369", "end": "2016-06-28 08:24:11.902489", "failed": true, "failed_when_result": true, "rc": 1, "start": "2016-06-28 08:24:11.900120", "stderr": "", "stdout": "", "stdout_lines": [], "warnings": []}
+...ignoring
+
+TASK [cis : 9.3.13.4 Limit Access via SSH (Scored)] ****************************
+fatal: [localhost]: FAILED! => {"changed": false, "cmd": "grep DenyGroups /etc/ssh/sshd_config", "delta": "0:00:00.002382", "end": "2016-06-28 08:24:12.068513", "failed": true, "failed_when_result": true, "rc": 1, "start": "2016-06-28 08:24:12.066131", "stderr": "", "stdout": "", "stdout_lines": [], "warnings": []}
+...ignoring
+
+TASK [cis : 9.3.14 Set SSH Banner (Scored)] ************************************
+ok: [localhost]
+
+TASK [cis : 9.4 Restrict root Login to System Console (stat securetty) (Not Scored)] ***
+ok: [localhost]
+
+TASK [cis : 9.4 Restrict root Login to System Console (Not Scored)] ************
+ok: [localhost] => {
+    "msg": "*** Check /etc/securetty for console allowed for root access ***"
+}
+
+TASK [cis : 9.5.1 Restrict Access to the su Command (Scored)] ******************
+ok: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_10.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_10_level1.yml for localhost
+
+TASK [cis : 10.1.1 Set Password Expiration Days (Scored)] **********************
+ok: [localhost]
+
+TASK [cis : 10.1.2 Set Password Change Minimum Number of Days (Scored)] ********
+ok: [localhost]
+
+TASK [cis : 10.1.3 Set Password Expiring Warning Days (Scored)] ****************
+ok: [localhost]
+
+TASK [cis : 10.2 Disable System Accounts (check) (Scored)] *********************
+ok: [localhost]
+
+TASK [cis : 10.2 Disable System Accounts (Scored)] *****************************
+
+TASK [cis : 10.3 Set Default Group for root Account (Scored)] ******************
+ok: [localhost]
+
+TASK [cis : 10.4 Set Default umask for Users (Scored)] *************************
+ok: [localhost]
+
+TASK [cis : 10.5 Lock Inactive User Accounts (check) (Scored)] *****************
+ok: [localhost]
+
+TASK [cis : 10.5 Lock Inactive User Accounts (Scored)] *************************
+skipping: [localhost]
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_11.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_11_level1.yml for localhost
+
+TASK [cis : 11.1.1 Set Warning Banner for Standard Login Services (Scored)] ****
+ok: [localhost] => (item=/etc/motd)
+ok: [localhost] => (item=/etc/issue)
+ok: [localhost] => (item=/etc/issue.net)
+
+TASK [cis : 11.2.1 Remove OS Information from Login Warning Banners (Scored)] **
+ok: [localhost] => (item=/etc/motd)
+ok: [localhost] => (item=/etc/issue)
+ok: [localhost] => (item=/etc/issue.net)
+
+TASK [cis : 11.3.1 Set Graphical Warning Banner (Not Scored)] ******************
+ok: [localhost] => {
+    "msg": "*** Set a banner for the display manager ***"
+}
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_12.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_12_level1.yml for localhost
+
+TASK [cis : 12.1 Verify Permissions on /etc/passwd (Scored)] *******************
+ok: [localhost]
+
+TASK [cis : 12.2 Verify Permissions on /etc/shadow (Scored)] *******************
+ok: [localhost]
+
+TASK [cis : 12.3 Verify Permissions on /etc/group (Scored)] ********************
+ok: [localhost]
+
+TASK [cis : 12.4 Verify User/Group Ownership on /etc/passwd (Scored)] **********
+ok: [localhost]
+
+TASK [cis : 12.5 Verify User/Group Ownership on /etc/shadow (Scored)] **********
+ok: [localhost]
+
+TASK [cis : 12.6 Verify User/Group Ownership on /etc/group (Scored)] ***********
+ok: [localhost]
+
+TASK [cis : 12.7 Find World Writable Files (check) (Not Scored)] ***************
+ok: [localhost]
+
+TASK [cis : 12.7 Find World Writable Files (Not Scored)] ***********************
+ok: [localhost] => (item=/etc/rsyslog.conf) => {
+    "item": "/etc/rsyslog.conf",
+    "msg": "/etc/rsyslog.conf"
+}
+
+TASK [cis : 12.8 Find Un-owned Files and Directories (check) (Scored)] *********
+ok: [localhost]
+
+TASK [cis : 12.8 Find Un-owned Files and Directories (Scored)] *****************
+
+TASK [cis : 12.9 Find Un-grouped Files and Directories (check) (Scored)] *******
+ok: [localhost]
+
+TASK [cis : 12.9 Find Un-grouped Files and Directories (Scored)] ***************
+
+TASK [cis : 12.10 Find SUID System Executables (check) (Not Scored)] ***********
+ok: [localhost]
+
+TASK [cis : 12.10 Find SUID System Executables (Not Scored)] *******************
+ok: [localhost] => (item=/bin/fusermount) => {
+    "item": "/bin/fusermount",
+    "msg": "/bin/fusermount"
+}
+ok: [localhost] => (item=/bin/mount) => {
+    "item": "/bin/mount",
+    "msg": "/bin/mount"
+}
+ok: [localhost] => (item=/bin/su) => {
+    "item": "/bin/su",
+    "msg": "/bin/su"
+}
+ok: [localhost] => (item=/bin/ping6) => {
+    "item": "/bin/ping6",
+    "msg": "/bin/ping6"
+}
+ok: [localhost] => (item=/bin/umount) => {
+    "item": "/bin/umount",
+    "msg": "/bin/umount"
+}
+ok: [localhost] => (item=/bin/ping) => {
+    "item": "/bin/ping",
+    "msg": "/bin/ping"
+}
+ok: [localhost] => (item=/usr/lib/openssh/ssh-keysign) => {
+    "item": "/usr/lib/openssh/ssh-keysign",
+    "msg": "/usr/lib/openssh/ssh-keysign"
+}
+ok: [localhost] => (item=/usr/lib/dbus-1.0/dbus-daemon-launch-helper) => {
+    "item": "/usr/lib/dbus-1.0/dbus-daemon-launch-helper",
+    "msg": "/usr/lib/dbus-1.0/dbus-daemon-launch-helper"
+}
+ok: [localhost] => (item=/usr/lib/landscape/apt-update) => {
+    "item": "/usr/lib/landscape/apt-update",
+    "msg": "/usr/lib/landscape/apt-update"
+}
+ok: [localhost] => (item=/usr/lib/eject/dmcrypt-get-device) => {
+    "item": "/usr/lib/eject/dmcrypt-get-device",
+    "msg": "/usr/lib/eject/dmcrypt-get-device"
+}
+ok: [localhost] => (item=/usr/lib/policykit-1/polkit-agent-helper-1) => {
+    "item": "/usr/lib/policykit-1/polkit-agent-helper-1",
+    "msg": "/usr/lib/policykit-1/polkit-agent-helper-1"
+}
+ok: [localhost] => (item=/usr/sbin/pppd) => {
+    "item": "/usr/sbin/pppd",
+    "msg": "/usr/sbin/pppd"
+}
+ok: [localhost] => (item=/usr/sbin/uuidd) => {
+    "item": "/usr/sbin/uuidd",
+    "msg": "/usr/sbin/uuidd"
+}
+ok: [localhost] => (item=/usr/bin/mtr) => {
+    "item": "/usr/bin/mtr",
+    "msg": "/usr/bin/mtr"
+}
+ok: [localhost] => (item=/usr/bin/sudo) => {
+    "item": "/usr/bin/sudo",
+    "msg": "/usr/bin/sudo"
+}
+ok: [localhost] => (item=/usr/bin/traceroute6.iputils) => {
+    "item": "/usr/bin/traceroute6.iputils",
+    "msg": "/usr/bin/traceroute6.iputils"
+}
+ok: [localhost] => (item=/usr/bin/chfn) => {
+    "item": "/usr/bin/chfn",
+    "msg": "/usr/bin/chfn"
+}
+ok: [localhost] => (item=/usr/bin/passwd) => {
+    "item": "/usr/bin/passwd",
+    "msg": "/usr/bin/passwd"
+}
+ok: [localhost] => (item=/usr/bin/at) => {
+    "item": "/usr/bin/at",
+    "msg": "/usr/bin/at"
+}
+ok: [localhost] => (item=/usr/bin/pkexec) => {
+    "item": "/usr/bin/pkexec",
+    "msg": "/usr/bin/pkexec"
+}
+ok: [localhost] => (item=/usr/bin/chsh) => {
+    "item": "/usr/bin/chsh",
+    "msg": "/usr/bin/chsh"
+}
+ok: [localhost] => (item=/usr/bin/gpasswd) => {
+    "item": "/usr/bin/gpasswd",
+    "msg": "/usr/bin/gpasswd"
+}
+ok: [localhost] => (item=/usr/bin/newgrp) => {
+    "item": "/usr/bin/newgrp",
+    "msg": "/usr/bin/newgrp"
+}
+
+TASK [cis : 12.11 Find SGID System Executables (check) (Not Scored)] ***********
+ok: [localhost]
+
+TASK [cis : 12.11 Find SGID System Executables (Not Scored)] *******************
+ok: [localhost] => (item=/sbin/unix_chkpwd) => {
+    "item": "/sbin/unix_chkpwd",
+    "msg": "/sbin/unix_chkpwd"
+}
+ok: [localhost] => (item=/usr/sbin/postqueue) => {
+    "item": "/usr/sbin/postqueue",
+    "msg": "/usr/sbin/postqueue"
+}
+ok: [localhost] => (item=/usr/sbin/uuidd) => {
+    "item": "/usr/sbin/uuidd",
+    "msg": "/usr/sbin/uuidd"
+}
+ok: [localhost] => (item=/usr/sbin/postdrop) => {
+    "item": "/usr/sbin/postdrop",
+    "msg": "/usr/sbin/postdrop"
+}
+ok: [localhost] => (item=/usr/bin/wall) => {
+    "item": "/usr/bin/wall",
+    "msg": "/usr/bin/wall"
+}
+ok: [localhost] => (item=/usr/bin/mlocate) => {
+    "item": "/usr/bin/mlocate",
+    "msg": "/usr/bin/mlocate"
+}
+ok: [localhost] => (item=/usr/bin/at) => {
+    "item": "/usr/bin/at",
+    "msg": "/usr/bin/at"
+}
+ok: [localhost] => (item=/usr/bin/mail-unlock) => {
+    "item": "/usr/bin/mail-unlock",
+    "msg": "/usr/bin/mail-unlock"
+}
+ok: [localhost] => (item=/usr/bin/chage) => {
+    "item": "/usr/bin/chage",
+    "msg": "/usr/bin/chage"
+}
+ok: [localhost] => (item=/usr/bin/ssh-agent) => {
+    "item": "/usr/bin/ssh-agent",
+    "msg": "/usr/bin/ssh-agent"
+}
+ok: [localhost] => (item=/usr/bin/dotlockfile) => {
+    "item": "/usr/bin/dotlockfile",
+    "msg": "/usr/bin/dotlockfile"
+}
+ok: [localhost] => (item=/usr/bin/crontab) => {
+    "item": "/usr/bin/crontab",
+    "msg": "/usr/bin/crontab"
+}
+ok: [localhost] => (item=/usr/bin/mail-touchlock) => {
+    "item": "/usr/bin/mail-touchlock",
+    "msg": "/usr/bin/mail-touchlock"
+}
+ok: [localhost] => (item=/usr/bin/mail-lock) => {
+    "item": "/usr/bin/mail-lock",
+    "msg": "/usr/bin/mail-lock"
+}
+ok: [localhost] => (item=/usr/bin/bsd-write) => {
+    "item": "/usr/bin/bsd-write",
+    "msg": "/usr/bin/bsd-write"
+}
+ok: [localhost] => (item=/usr/bin/screen) => {
+    "item": "/usr/bin/screen",
+    "msg": "/usr/bin/screen"
+}
+ok: [localhost] => (item=/usr/bin/expiry) => {
+    "item": "/usr/bin/expiry",
+    "msg": "/usr/bin/expiry"
+}
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_13.yml for localhost
+
+TASK [cis : include] ***********************************************************
+included: /home/ubuntu/ansible/roles-ubuntu/roles/cis/tasks/section_13_level1.yml for localhost
+
+TASK [cis : 13.1 Ensure Password Fields are Not Empty (Scored)] ****************
+fatal: [localhost]: FAILED! => {"changed": false, "cmd": ["awk", "-F:", "($2 == \"\" ) { print $1 }", "/etc/shadow"], "delta": "0:00:00.002441", "end": "2016-06-28 08:24:24.092910", "failed": true, "failed_when_result": true, "rc": 0, "start": "2016-06-28 08:24:24.090469", "stderr": "", "stdout": "nopassuser", "stdout_lines": ["nopassuser"], "warnings": []}
+...ignoring
+
+TASK [cis : 13.1 Ensure Password Fields are Not Empty (locking accounts) (Scored)] ***
+skipping: [localhost] => (item=nopassuser)
+
+TASK [cis : 13.2 Verify No Legacy "+" Entries Exist in /etc/passwd File (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 13.3 Verify No Legacy "+" Entries Exist in /etc/shadow File (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 13.4 Verify No Legacy "+" Entries Exist in /etc/group File (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 13.5 Verify No UID 0 Accounts Exist Other Than root (Scored)] ******
+ok: [localhost]
+
+TASK [cis : 13.6.1 Ensure root PATH Integrity (empty value) (Scored)] **********
+ok: [localhost]
+
+TASK [cis : 13.6.2 Ensure root PATH Integrity (colon end) (Scored)] ************
+ok: [localhost]
+
+TASK [cis : 13.6.3 Ensure root PATH Integrity (dot in path) (Scored)] **********
+ok: [localhost]
+
+TASK [cis : 13.6.4 Ensure root PATH Integrity (Scored)] ************************
+ok: [localhost] => (item=/usr/local/sbin)
+ok: [localhost] => (item=/usr/local/bin)
+ok: [localhost] => (item=/usr/sbin)
+ok: [localhost] => (item=/usr/bin)
+ok: [localhost] => (item=/sbin)
+ok: [localhost] => (item=/bin)
+ok: [localhost] => (item=/usr/games)
+ok: [localhost] => (item=/usr/local/games)
+
+TASK [cis : 13.7.1 Check Permissions on User Home Directories (gather users) (Scored)] ***
+ok: [localhost]
+
+TASK [cis : 13.7.2 Check Permissions on User Home Directories (Scored)] ********
+ok: [localhost] => (item=/home/ubuntu)
+
+TASK [cis : 13.8.1 Check User Dot File Permissions (gather dotfiles) (Scored)] *
+ok: [localhost]
+
+TASK [cis : 13.8.2 Check User Dot File Permissions (Scored)] *******************
+ok: [localhost] => (item=/home/ubuntu/.bash_logout)
+ok: [localhost] => (item=/home/ubuntu/.bashrc)
+ok: [localhost] => (item=/home/ubuntu/.cache)
+ok: [localhost] => (item=/home/ubuntu/.netrc)
+ok: [localhost] => (item=/home/ubuntu/.pip)
+ok: [localhost] => (item=/home/ubuntu/.profile)
+ok: [localhost] => (item=/home/ubuntu/.ssh)
+
+TASK [cis : 13.9 Check Permissions on User .netrc Files (Scored)] **************
+ok: [localhost] => (item=/home/ubuntu)
+
+TASK [cis : 13.10 Check for Presence of User .rhosts Files (Scored)] ***********
+ok: [localhost] => (item=/home/ubuntu)
+
+TASK [cis : 13.11 Check Groups in /etc/passwd (preparation) (Scored)] **********
+ok: [localhost]
+
+TASK [cis : 13.11 Check Groups in /etc/passwd (Scored)] ************************
+ok: [localhost] => (item=0)
+ok: [localhost] => (item=1)
+ok: [localhost] => (item=2)
+ok: [localhost] => (item=3)
+ok: [localhost] => (item=65534)
+ok: [localhost] => (item=60)
+ok: [localhost] => (item=12)
+ok: [localhost] => (item=7)
+ok: [localhost] => (item=8)
+ok: [localhost] => (item=9)
+ok: [localhost] => (item=10)
+ok: [localhost] => (item=13)
+ok: [localhost] => (item=33)
+ok: [localhost] => (item=34)
+ok: [localhost] => (item=38)
+ok: [localhost] => (item=39)
+ok: [localhost] => (item=41)
+ok: [localhost] => (item=65534)
+ok: [localhost] => (item=101)
+ok: [localhost] => (item=104)
+ok: [localhost] => (item=106)
+ok: [localhost] => (item=109)
+ok: [localhost] => (item=65534)
+ok: [localhost] => (item=1)
+ok: [localhost] => (item=1000)
+ok: [localhost] => (item=111)
+ok: [localhost] => (item=112)
+ok: [localhost] => (item=113)
+ok: [localhost] => (item=65534)
+ok: [localhost] => (item=115)
+
+TASK [cis : 13.12 Check That Users Are Assigned Valid Home Directories (Scored)] ***
+ok: [localhost] => (item=/home/ubuntu)
+
+TASK [cis : 13.13 Check User Home Directory Ownership (Scored)] ****************
+ok: [localhost] => {
+    "msg": "*** Hardcore ***"
+}
+
+TASK [cis : 13.14 Check for Duplicate UIDs (Scored)] ***************************
+ok: [localhost]
+
+TASK [cis : 13.15 Check for Duplicate GIDs (Scored)] ***************************
+ok: [localhost]
+
+TASK [cis : 13.16 Check for Duplicate User Names (Scored)] *********************
+ok: [localhost]
+
+TASK [cis : 13.17 Check for Duplicate Group Names (Scored)] ********************
+ok: [localhost]
+
+TASK [cis : 13.18 Check for Presence of User .netrc Files (stat) (Scored)] *****
+ok: [localhost] => (item=/home/ubuntu)
+
+TASK [cis : 13.18 Check for Presence of User .netrc Files (Scored)] ************
+ok: [localhost] => (item={u'stat': {u'uid': 0, u'exists': True, u'woth': False, u'mtime': 1467099395.071718, u'inode': 524410, u'isgid': False, u'size': 4096, u'roth': False, u'isuid': False, u'isreg': False, u'pw_name': u'root', u'gid': 0, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 2, u'issock': False, u'rgrp': False, u'gr_name': u'root', u'path': u'/home/ubuntu/.netrc', u'xusr': True, u'atime': 1467099449.899718, u'isdir': True, u'ctime': 1467099395.071718, u'isblk': False, u'xgrp': False, u'dev': 64515, u'wgrp': False, u'isfifo': False, u'mode': u'0700', u'islnk': False}, '_ansible_item_result': True, '_ansible_no_log': False, u'changed': False, 'item': u'/home/ubuntu', 'invocation': {'module_name': u'stat', u'module_args': {u'checksum_algorithm': u'sha1', u'mime': False, u'get_checksum': True, u'follow': False, u'path': u'/home/ubuntu/.netrc', u'get_md5': True}}}) => {
+    "item": {
+        "changed": false,
+        "invocation": {
+            "module_args": {
+                "checksum_algorithm": "sha1",
+                "follow": false,
+                "get_checksum": true,
+                "get_md5": true,
+                "mime": false,
+                "path": "/home/ubuntu/.netrc"
+            },
+            "module_name": "stat"
+        },
+        "item": "/home/ubuntu",
+        "stat": {
+            "atime": 1467099449.899718,
+            "ctime": 1467099395.071718,
+            "dev": 64515,
+            "exists": true,
+            "gid": 0,
+            "gr_name": "root",
+            "inode": 524410,
+            "isblk": false,
+            "ischr": false,
+            "isdir": true,
+            "isfifo": false,
+            "isgid": false,
+            "islnk": false,
+            "isreg": false,
+            "issock": false,
+            "isuid": false,
+            "mode": "0700",
+            "mtime": 1467099395.071718,
+            "nlink": 2,
+            "path": "/home/ubuntu/.netrc",
+            "pw_name": "root",
+            "rgrp": false,
+            "roth": false,
+            "rusr": true,
+            "size": 4096,
+            "uid": 0,
+            "wgrp": false,
+            "woth": false,
+            "wusr": true,
+            "xgrp": false,
+            "xoth": false,
+            "xusr": true
+        }
+    },
+    "msg": "Check if /home/ubuntu/.netrc is needed, and remove otherwise"
+}
+
+TASK [cis : 13.19 Check for Presence of User .forward Files (Scored)] **********
+ok: [localhost] => (item=/home/ubuntu)
+
+TASK [cis : 13.20.1 Ensure shadow group is empty (Scored)] *********************
+ok: [localhost]
+
+TASK [cis : 13.20.2 Ensure shadow group is empty (preparation) (Scored)] *******
+ok: [localhost]
+
+TASK [cis : 13.20.2 Ensure shadow group is empty (Scored)] *********************
+ok: [localhost] => (item=shadow)
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=247  changed=0    unreachable=0    failed=0

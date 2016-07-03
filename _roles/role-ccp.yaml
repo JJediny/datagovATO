@@ -1,0 +1,36 @@
+id: role-ccp
+type: role
+title: Common Control Provider
+source: RMF
+responsibilities:
+  primary:
+    - 2.2
+  primary_or:
+    - 2.3
+    - 3.1
+    - 3.2
+    - 5.1
+    - 5.2
+    - 5.3
+    - 6.1
+    - 6.3
+    - 6.4
+    - 6.5
+  secondary:
+  secondary_or:
+    - 4.1
+    - 4.2
+    - 4.3
+    - 6.2
+description: |
+  The common control provider is an individual, group, or organization
+  responsible for the development, implementation, assessment, and
+  monitoring of common controls (i.e., security controls inherited by
+  information systems).
+terms:
+- text: Common Control Provider
+  same-as:
+    term: CCP
+- text: CCP
+  same-as:
+    term: Common Control Provider
